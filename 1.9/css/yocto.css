@@ -1,0 +1,64 @@
+/*Yocto Custom CSS*/
+
+/*@import url(/Yocto/assets/css/bootstrap.css);*/
+
+body{padding-bottom:0px !important;}
+
+div#main{min-height:985px;}
+
+.navbar .brand{color:#fff;}
+.navbar .nav > li > a, .navbar a{color:#999999;}
+div.nav-collapse form.well {padding:0px !important;width:200px;height:20px;float:left;background:none;}
+form.form-search input{border:0px;margin:7px 0px 0px 20px;width:150px;height:16px;background:#686868;color:#fff;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 0px 0px 
+}
+
+div#top-right-tools {margin-top:10px;display:inline;float:right;}
+div#queue{display:inline;float:left;}
+div#settings, div#user{margin-left:10px;display:inline;float:left;}
+div#user ul.nav {margin:-28px 0px 0px 8px;padding:0px 0px 0px 0px;display:inline;float:left;}
+
+div.yocto-gyro {padding:30px 40px 30px 40px !important;}
+footer {padding-left:30px;height:30px;line-height:30px;bottom:0;position:relative;background:black;color:#fff;}
+
+table.build_table {width:100%;border: 
+none;border-collapse:collapse;}
+table.build_table tbody {display: table-row-group;
+vertical-align: middle;
+border-color: inherit;}
+table.build_table tr{display: table-row;
+vertical-align: inherit;
+border-color: inherit;text-align:left;}
+table.build_table td {
+padding:8px 0px;
+line-height: 18px;
+text-align: left;
+vertical-align: top;
+border: 0px solid #DDD;
+}
+
+table.build_table td.col_one{width:160px;font-weight:bold;}
+table.build_table td.col_two{width:50px;font-weight:bold;}
+table.build_table td.col_three{width:120px;}
+table.build_table td.col_four{width:150px;}
+table.build_table td.col_five{width:150px;}
+table.build_table td.col_six{width:60px;}
+
+table tr:hover td{
+  background-color: #EDEDED;
+}
+
+div.grouppods {border-top:1px solid #dddddd;padding:25px 0px 30px 0px;}
+
+
+.inline {display:inline;float:left;}
+.minnav{margin:10px 0px 0px 10px;display:inline;float:left;}
+
+.input-textarea_modal{width:97%;}
+div.modal div.form-actions button {margin-left:10px !important;}
+

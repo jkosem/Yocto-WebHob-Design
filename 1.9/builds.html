@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yocto Web Hob</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/yocto.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+     <!--remove and use @import in css in production-->
+     <link href="../assets/css/bootstrap.css" rel="stylesheet">
+     <!--remove and use @import in css in production-->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+     <div class="navbar-inner">
+          <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Yocto Web Hob</a>
+               
+               <!--/.nav-collapse -->
+               <div class="nav-collapse">
+               <ul class="nav">
+          <li ><a href="builds.html">Builds</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="groups.html">Groups</a></li>
+        </ul>
+            
+               <!--Search Form-->
+               <form class="well form-search yocto-search">
+               <input type="text" value="Search" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" size="32" tabindex="1">
+</form>
+               <!--Search Form-->
+            
+            
+                    <div id="top-right-tools">
+                 
+                         <!--Queue-->
+                         <div id="queue"><a data-toggle="modal" href="#queueModal"><i class="icon-time icon-white"></i> Queue</a> <span class="badge badge-success">2</span></div>
+                         <!--Queue-->
+                         
+                         <!--Settings-->
+                         <div id="settings"><a href="#"><i class="icon-cog icon-white"></i> Settings</a></div>
+                         <!--Settings-->
+                         
+                         <!--User-->
+                         <div id="user"><i class="icon-user icon-white"></i>
+                         
+                         <ul class="nav">
+                         <li class="dropdown">
+                         <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">UserName <span class="caret"></span></a>
+                              <ul class="dropdown-menu ">
+                              <li><img src="images/avatar_user.png"> UserName</li>
+                               <li class="divider"></li>
+                              <li><button class="btn btn-primary" href="#">Log Out</li>
+                              </ul>
+                         </li>
+                         </ul>
+                         
+                         </div>
+                         <!--User-->
+          
+                    </div>
+                    <!--Top Right Tools-->
+
+            </div>
+             <!--/.nav-collapse --> 
+               
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="main" class="container">
+
+      <!-- Example row of columns -->
+      <div class="row main">
+          <div class="span9">
+          <h2 class="inline">Builds</h2>
+               <div class="minnav">
+               <ul class="nav">
+               <li class="dropdown">
+               <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">Sort by date <span class="caret"></span></a>
+                    <ul class="dropdown-menu ">
+                    <li>date string</li>
+                    <li>date string</li>
+                    <li>date string</li>
+                    <li>date string</li>
+                    </ul>
+               </li>
+               </ul>
+               </div>
+         
+               <div class="accordian" id="accordian1">
+                    
+                    <!--accordian1-->  
+                    <table class="build_table">
+                    <tr>
+                    <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
+                    <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
+                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_four"><span class="label">Big Project</span></td>
+                    <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
+                    <td class="col_six"><a data-toggle="modal" href="#build_reportModal"><i class="icon-warning-sign"></i></a> <a data-toggle="modal" href="#build_shareModal"><i class="icon-share-alt"></i></a> <i class="icon-trash"></i></td>
+                    </tr>
+                    </table>
+                    
+                    <!--Collapsed-->
+                    <div id="collapseOne" class="accordian-body collapse">
+                         <div class="accordian-inner well">
+                         
+                              <ul class="nav nav-pills">
+                              <li class="active">
+                              <a href="#">Download</a>
+                              </li>
+                              <li><a href="#">Deploy</a></li>
+                              <li><a href="#">Test</a></li>
+                              </ul>
+                              
+                              <h1>Download</h1>
+                              
+                              <form>
+                              <table class="table table-bordered table-striped">
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              </table>
+                              </form>
+                              
+                              <div><button class="btn btn-primary btn-large"><i class="icon_download_alt"></i>Download</button> <a href="#"><i class=" icon-remove"></i> Cancel</a> &nbsp;<input type="checkbox" id="optionsCheckbox" value="option1"> All available files as .zip
+                              
+                              </div>
+                         
+                         </div>
+
+                    </div>
+                    <!--Collapsed-->
+                    <!--accordian1-->   
+                         
+                     <!--accordian2-->
+                    <table class="build_table">
+                    <tr>
+                    <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">bigbuild01234545689av</a></td>
+                    <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">2.1MB</a></td>
+                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_four"><span class="label">Big Project</span></td>
+                    <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
+                    <td class="col_six"><a data-toggle="modal" href="#build_reportModal"><i class="icon-warning-sign"></i></a> <a data-toggle="modal" href="#build_shareModal"><i class="icon-share-alt"></i></a> <i class="icon-trash"></i></td>
+                    </tr>
+                    </table>
+                    
+                    <div id="collapseTwo" class="accordian-body collapse">
+                         <div class="accordian-inner well">
+                         
+                              <ul class="nav nav-pills">
+                              <li class="active">
+                              <a href="#">Download</a>
+                              </li>
+                              <li><a href="#">Deploy</a></li>
+                              <li><a href="#">Test</a></li>
+                              </ul>
+                              
+                              <h1>Download</h1>
+                              
+                              <form>
+                              <table class="table table-bordered table-striped">
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              </table>
+                              </form>
+                              
+                              <div><button class="btn btn-primary btn-large"><i class="icon_download_alt"></i>Download</button> <a href="#"><i class=" icon-remove"></i> Cancel</a> &nbsp;<input type="checkbox" id="optionsCheckbox" value="option1"> All available files as .zip
+                              
+                              </div>
+                         
+                         </div>   
+                    </div>
+                    <!--accordian2-->
+                    
+                    <!--accordian3-->    
+                    <table class="build_table">
+                    <tr>
+                    <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree">bigbuild01234545689av</a></td>
+                    <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree">2.1MB</a></td>
+                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_four"><span class="label">Big Project</span></td>
+                    <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
+                    <td class="col_six"><a data-toggle="modal" href="#build_reportModal"><i class="icon-warning-sign"></i></a> <a data-toggle="modal" href="#build_shareModal"><i class="icon-share-alt"></i></a> <i class="icon-trash"></i></td>
+                    </tr>
+                    </table>
+                    
+                    <div id="collapseThree" class="accordian-body collapse">
+                         <div class="accordian-inner well">
+                         
+                              <ul class="nav nav-pills">
+                              <li class="active">
+                              <a href="#">Download</a>
+                              </li>
+                              <li><a href="#">Deploy</a></li>
+                              <li><a href="#">Test</a></li>
+                              </ul>
+                              
+                              <h1>Download</h1>
+                              
+                              <form>
+                              <table class="table table-bordered table-striped">
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              </table>
+                              </form>
+                              
+                              <div><button class="btn btn-primary btn-large"><i class="icon_download_alt"></i>Download</button> <a href="#"><i class=" icon-remove"></i> Cancel</a> &nbsp;<input type="checkbox" id="optionsCheckbox" value="option1"> All available files as .zip
+                              
+                              </div>
+                         
+                         </div>   
+                    </div>
+                    <!--accordian3-->
+                    
+                    <!--accordian4-->    
+                    <table class="build_table">
+                    <tr>
+                    <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour">bigbuild01234545689av</a></td>
+                    <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour">2.1MB</a></td>
+                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_four"><span class="label label-important">Yocto Block Rollout</span></td>
+                    <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
+                    <td class="col_six"><a data-toggle="modal" href="#build_reportModal"><i class="icon-warning-sign"></i></a> <a data-toggle="modal" href="#build_shareModal"><i class="icon-share-alt"></i></a> <i class="icon-trash"></i></td>
+                    </tr>
+                    </table>
+                    
+                    <div id="collapseFour" class="accordian-body collapse">
+                         <div class="accordian-inner well">
+                         
+                              <ul class="nav nav-pills">
+                              <li class="active">
+                              <a href="#">Download</a>
+                              </li>
+                              <li><a href="#">Deploy</a></li>
+                              <li><a href="#">Test</a></li>
+                              </ul>
+                              
+                              <h1>Download</h1>
+                              
+                              <form>
+                              <table class="table table-bordered table-striped">
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              </table>
+                              </form>
+                              
+                              <div><button class="btn btn-primary btn-large"><i class="icon_download_alt"></i>Download</button> <a href="#"><i class=" icon-remove"></i> Cancel</a> &nbsp;<input type="checkbox" id="optionsCheckbox" value="option1"> All available files as .zip
+                              
+                              </div>
+                         
+                         </div>   
+                    </div>
+                    <!--accordian4-->
+                    
+                    <!--accordian5-->
+                    <table class="build_table">
+                    <tr>
+                    <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive">bigbuild01234545689av</a></td>
+                    <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive">2.1MB</a></td>
+                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_four"><span class="label">Big Project</span></td>
+                    <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
+                    <td class="col_six"><a data-toggle="modal" href="#build_reportModal"><i class="icon-warning-sign"></i></a> <a data-toggle="modal" href="#build_shareModal"><i class="icon-share-alt"></i></a> <i class="icon-trash"></i></td>
+                    </tr>
+                    </table>
+                    
+                    <div id="collapseFive" class="accordian-body collapse">
+                         <div class="accordian-inner well">
+                         
+                              <ul class="nav nav-pills">
+                              <li class="active">
+                              <a href="#">Download</a>
+                              </li>
+                              <li><a href="#">Deploy</a></li>
+                              <li><a href="#">Test</a></li>
+                              </ul>
+                              
+                              <h1>Download</h1>
+                              
+                              <form>
+                              <table class="table table-bordered table-striped">
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              <tr>
+                              <td>
+                            <div class="controls">
+                            <input type="checkbox" id="optionsCheckbox" value="option1">
+                            </div>
+                              </td>
+                              <td><i class="icon-download_alt"></i> <a href="#">core-image-minimal-atom-pc-11233768765.rootfs.jffs2</a></td>
+                              <td>3.2 MB</td>
+                              </tr>
+                              </table>
+                              </form>
+                              
+                              <div><button class="btn btn-primary btn-large"><i class="icon_download_alt"></i>Download</button> <a href="#"><i class=" icon-remove"></i> Cancel</a> &nbsp;<input type="checkbox" id="optionsCheckbox" value="option1"> All available files as .zip
+                              
+                              </div>
+                         
+                         </div>   
+                    </div>
+                    <!--accordian5-->
+                    
+               </div>
+               <!--accordian all-->    
+             
+          </div>
+          
+          <div class="span3">
+               <div class="well">
+               <h3>Your Builds</h3>
+               <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.</p>
+               </div>
+               
+          </div> 
+          
+     </div>
+
+      <hr>
+
+<!--Queue Modal Content-->
+<div id="queueModal" class="modal hide fade">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3>Running Builds</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Build 1</h4>
+              <p>Some information about the build.</p>
+              
+              <div class="progress progress-success">
+                    <div class="bar" style="width: 60%;"></div>
+              </div>
+              
+              <div class="alert alert-success">Done! <a href="#">Download Build 1 here.</a></div>
+
+              <h4>Build 2</h4>
+              <p>Some information about the build.</p>
+              
+              <div class="progress progress-striped
+     active">
+                    <div class="bar " style="width: 60%;"></div>
+              </div>
+              
+              <p><i class="icon-time"></i> 01:23:02 remaining</p>
+
+              <h4>Build 3</h4>
+              <p>Some information about the build.</p>
+
+              <div class="progress progress-striped
+     active">
+                    <div class="bar " style="width: 60%;"></div>
+              </div>
+              
+              <p><i class="icon-time"></i> 01:23:02 remaining</p>
+
+              
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal" >Close</a>
+            </div>
+          </div>
+<!--Queue Modal Content-->
+<!--Build Report Modal Content-->
+<div id="build_reportModal" class="modal hide fade">
+
+     <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">&times;</button>
+     <h3>Report a build configuration</h3>
+     </div>
+     
+     <div class="modal-body">
+          <div class="alert alert-error">
+          <strong>Hey!</strong> Reporting false bad configurations can screw other people up.  Be careful.
+          </div>
+              
+          <form>
+          <label class="control-label" for="textarea01">Additional info about what went wrong</label>
+          <textarea class="input-textarea_modal" id="textarea01" rows="3"></textarea>
+          <p><button class="btn pull-right">Clear</button></p>
+          <h3>Severity of the problem</h3>
+          
+          <div class="control-group">
+          
+               <div class="controls">
+               <label class="radio">
+               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+               Option one is this and that&mdash;be sure to include why it's great
+               </label>
+               <label class="radio">
+               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+               Option two can be something else and selecting it will deselect option one
+               </label>
+               </div>
+               
+          </div>
+          
+          <div class="form-actions">
+          <button type="submit" class="btn btn-primary  pull-right">Report</button>
+          <button  href="#" class="btn pull-right" data-dismiss="modal">Cancel</button>
+          
+          </div>
+          
+          </form>
+     
+     </div>
+
+</div>
+<!--Build Report Modal Content-->
+
+<!--Share Build Modal Content-->
+<div id="build_shareModal" class="modal hide fade">
+
+     <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">&times;</button>
+     <h3>Share your build</h3>
+     </div>
+     
+     <div class="modal-body">
+          <div class="alert alert-info">
+          <strong>Share what you made!</strong> Just put in someone's email and they'll get a lnk.
+          </div>
+              
+          <form>
+          <input type="text" class="span3" placeholder="Email address of recipient">
+          <label class="control-label" for="textarea01">Message</label>
+          <textarea class="input-textarea_modal" id="textarea01" rows="3"></textarea>
+          
+          
+          <div class="form-actions">
+          <button type="submit" class="btn btn-primary  pull-right">Send</button>
+          <button  href="#" class="btn pull-right" data-dismiss="modal">Cancel</button>
+          
+          </div>
+          
+          </form>
+     
+     </div>
+
+</div>
+<!--Share Build  Modal Content-->
+
+</div> <!-- /container -->
+
+<footer>
+<p>&copy; The Yocto Project</p>
+ </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

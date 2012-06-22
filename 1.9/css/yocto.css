@@ -62,3 +62,9 @@ div.grouppods {border-top:1px solid #dddddd;padding:25px 0px 30px 0px;}
 .input-textarea_modal{width:97%;}
 div.modal div.form-actions button {margin-left:10px !important;}
 
+
+
+
+.modal.fade {
+  top: -25%;
+}

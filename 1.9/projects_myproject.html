@@ -30,7 +30,6 @@ padding-bottom: 40px;
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-
 <!-- Le fav and touch icons -->
 <link rel="shortcut icon" href="../assets/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -108,17 +107,16 @@ padding-bottom: 40px;
           <!-- Main Content -->
           <!--Top Bar-->
            <div class="row">
-               <div class="span12">
-                    <div class="row">
-                         <div class="span2">
-                         <h2>Projects</h2>
-                         </div>
-                     
-                         <div class="span7">
-                         <p>&nbsp;</p>
-                         </div>
-                     
-                    </div>
+               <div class="span12" >
+                <h2 class="pull-left">Yocto Block Rollout</h2>
+	     <ul class="nav nav-pills topbarnav pull-left">
+	     <li class="active">
+	     <a href="#">Project</a>
+	     </li>
+	     <li><a href="#"><i class="icon-time"></i> History</a></li>
+	     <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+	     <li><a href="#"><i class="icon-lock"></i> Permissions</a></li>
+	     </ul>
                </div>
           </div>
           <!--Top Bar-->
@@ -129,106 +127,213 @@ padding-bottom: 40px;
                <div class="span9">
      
                     <!--Project List-->
-                    <!--Project 1-->
-                    <div class="row">
-                         <div class="span2">
-                         <h4><a href="#">Big Project</a></h4>
-                         </div>
-               
-                         <div class="span7">
-                              <div class="row">        
-                                   <div class="span4">
-                                   <p>A big project to rollout a thing made out of Yocto.</p>
-                                   </div>
-                                      
-                                   <div class="span3">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   </div>
-                              </div>
-                         </div>
+                    <div class=" grouppods">
+		<h2 class="pull-left">Builds</h2>
+		     <div class="minnav" class="pull-left">
+		     <ul class="nav">
+		     <li class="dropdown">
+		     <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" >Sort by date <span class="caret"></span></a>
+			<ul class="dropdown-menu ">
+			<li>date string</li>
+			<li>date string</li>
+			<li>date string</li>
+			<li>date string</li>
+			</ul>
+		     </li>
+		     </ul>
+		     </div>
+		     
+		     <div class="btn-group pull-right">
+		     <button class="btn">Most Recent</button>
+		     <button class="btn">All</button>
+		     </div>
+		     
+		     <div>
+		     <table class="table mybuildtable">
                          
-                    </div>
-                    <!--Project 1-->
-               
-                    <!--Project 2-->
-                    <div class="row">
-          
-                         <div class="span2">
-                         <h4><a href="projects_myproject.html">Yocto Block Rollout</a></h4>
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
                          </div>
-               
-                         <div class="span7">
-                              <div class="row">        
-                                   <div class="span4">
-                                   <p>Another sort of project where we're trying to make something out of Yocto.</p>
-                                   </div>
-                                
-                                   <div class="span3">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   <img src="images/avatar_user.png" class="pull-left">
-                                   </div>
-                              </div>
-                        </div>
-                        
-                    </div>
-                    <!--Project2-->
-                    <!--Project List-->
-                    
-                    <!--Create Project-->
-                    <div class="row">
-          
-                         <div class="span8 well">
-                         <h2>Create a new project</h2>
-                         
-                         <form class="form">
-           
-                         <input type="text" class="span3" placeholder="Name your project">
-                              <div class="control-group">
-                      
-                                   <div class="controls">
-                                   <select id="select01">
-                                   <option>Select a template</option>
-                                   <option>2</option>
-                                   <option>3</option>
-                                   <option>4</option>
-                                   <option>5</option>
-                                   </select>
-                                   </div>
-                              </div>
-                         <button type="submit" class="btn btn-primary">Create Project</button>
-                         </form>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
                          </div>
-                          
-                     </div>
-                    <!--Create Project-->
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
 
+                         </table>
+		     </div>
+                         
+		</div>
+          
+     
                </div>
                <!--MAIN WORK AREA-->
      
                <!--SIDEBAR-->
                <div class="span3">
-                    <div class="well">
-                    <h4>What are projects?</h4>
-                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    
+                    <h4>Project Members</h4>
+		<h4><small>Dev Group</small></h4>
+                    <p><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /></p>
+		
+		<h4><small>No Group</small></h4>
+                    <p><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /><img src="images/avatar_user.png" /></p>
+		<p><a href="#"><button class="btn"><i class="icon-plus-sign"></i> Add someone to your project</button></a></p>
+		     
+		<p><a href="#"><button class="btn"><i class="icon-plus-sign"></i> Add a group</button></a></p>
           
-          <p><a href="#">More about projects &raquo;</a></p>
-                    </div>
                </div>
                <!--SIDEBAR-->
                
           </div>
+	
+	<!--CREATE A BUILD-->
+	<div class="row">
+	     <div class="span12">
+		<!--WELL-->
+		<div class="well">
+		     
+		     <!--CAB Header-->
+		     <div class="row">
+			<div class="span11">
+			<h2>Create a build</h2>
+			</div>
+		     </div>
+		     <!--CAB Header-->
+		     
+		     <!--CAB Work Area-->
+		     <div class="row">
+			<div class="span7">Select a machine
+			</div>
+			
+			<!--CAB Sidebar-->
+			<div class="span4">
+			     <div class="well">
+				<div class="row>
+				     <div class="span4 pull-left">
+				     <h3>Add Layers</h3>
+				     Most used
+				     Search
+				     </div>
+				</div>
+			     </div>
+			</div>
+			<!--CAB Sidebar-->
+			
+		     </div>
+		     <!--CAB Work Area-->
+		     
+		</div>
+		<!--WELL-->
+	     </div>
+	</div>
+	<!--CREATE A BUILD-->
                 
      </div>
      <!--Main Content-->
 
 
 <!--Queue Modal Content-->
-<div id="queueModal" class="modal hide fade">
+<div id="queueModal" class="modal hide">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h3>Running Builds</h3>

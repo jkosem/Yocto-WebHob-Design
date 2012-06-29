@@ -1,10 +1,12 @@
 /*Yocto Custom CSS*/
 
 /*@import url(/Yocto/assets/css/bootstrap.css);*/
-
+html, body {height: 100%;}
 body{padding-bottom:0px !important;}
+#wrap {min-height: 100%;}
+div#main {overflow:auto;
+	padding-bottom: 30px;}  /* must be same height as the footer */
 
-div#main{min-height:985px;}
 
 .navbar .brand{color:#fff;}
 .navbar .nav > li > a, .navbar a{color:#999999;}
@@ -24,7 +26,10 @@ div#settings, div#user{margin-left:10px;display:inline;float:left;}
 div#user ul.nav {margin:-28px 0px 0px 8px;padding:0px 0px 0px 0px;display:inline;float:left;}
 
 div.yocto-gyro {padding:30px 40px 30px 40px !important;}
-footer {padding-left:30px;height:30px;line-height:30px;bottom:0;position:relative;background:black;color:#fff;}
+ul.topbarnav {margin-left:30px;}
+
+footer {padding-left:30px;margin-top:-30px;height:30px;line-height:30px;bottom:0;position:relative;background:black;color:#fff;clear:both;}
+
 
 table.build_table {width:100%;border: 
 none;border-collapse:collapse;}
@@ -42,8 +47,10 @@ vertical-align: top;
 border: 0px solid #DDD;
 }
 
-table.build_table td.col_one{width:160px;font-weight:bold;}
-table.build_table td.col_two{width:50px;font-weight:bold;}
+table a {font-weight:bold;}
+
+table.build_table td.col_one{width:160px;}
+table.build_table td.col_two{width:50px;}
 table.build_table td.col_three{width:120px;}
 table.build_table td.col_four{width:150px;}
 table.build_table td.col_five{width:150px;}
@@ -55,16 +62,28 @@ table tr:hover td{
 
 div.grouppods {border-top:1px solid #dddddd;padding:25px 0px 30px 0px;}
 
+.customwell {min-height: 20px;
+padding: 19px;
+margin-bottom: 20px;
+background-color: 
+whiteSmoke;
+border: 1px solid 
+#EEE;
+border: 1px solid 
+rgba(0, 0, 0, 0.05);
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px 
+rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 1px 
+rgba(0, 0, 0, 0.05);
+}
+
 
 .inline {display:inline;float:left;}
 .minnav{margin:10px 0px 0px 10px;display:inline;float:left;}
 
 .input-textarea_modal{width:97%;}
 div.modal div.form-actions button {margin-left:10px !important;}
-
-
-
-
-.modal.fade {
-  top: -25%;
-}

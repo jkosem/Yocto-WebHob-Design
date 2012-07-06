@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yocto Web Hob</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<!--remove and use @import in css in production-->
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<!--remove and use @import in css in production-->
+<link href="css/yocto.css" rel="stylesheet">
+<style type="text/css">
+body {
+padding-top: 60px;
+padding-bottom: 40px;
+}
+</style>
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!--[if !IE 7]>
+<style type="text/css">
+#wrap {display:table;height:100%}
+</style>
+<![endif]-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+<div id="wrap">
+     <!--HEADER-->
+     <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+               <div class="container">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </a>
+               <a class="brand" href="#">Yocto Web Hob</a>
+               <div class="nav-collapse">
+               <ul class="nav">
+               <li ><a href="builds.html">Builds</a></li>
+               <li><a href="projects.html">Projects</a></li>
+               <li><a href="groups.html">Groups</a></li>
+               </ul>
+               
+               <!--Search Form-->
+               <form class="well form-search yocto-search">
+               <input type="text" value="Search" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" size="32" tabindex="1">
+               </form>
+               <!--Search Form-->
+             
+                    <!--Top Right Tools-->
+                    <div id="top-right-tools">
+             
+                         <!--Queue-->
+                         <div id="queue"><a data-toggle="modal" href="#queueModal"><i class="icon-time icon-white"></i> Queue</a> <span class="badge badge-success">2</span></div>
+                         <!--Queue-->
+                         
+                         <!--User-->
+                         <div id="user"><i class="icon-user icon-white"></i>
+                         
+                         <ul class="nav">
+                         <li class="dropdown">
+                         <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">UserName <span class="caret"></span></a>
+                              <ul class="dropdown-menu ">
+                              <li><img src="images/avatar_user.png" alt="user name" width="36" height="36" /> UserName</li>
+                               <li class="divider"></li>
+                              <li><button class="btn btn-primary">Log Out</button></li>
+                              </ul>
+                         </li>
+                         </ul>
+                         </div>
+                         <!--User-->
+                    </div>
+                    <!--Top Right Tools-->
+     
+               </div>
+           </div><!--/.nav-collapse -->
+     
+         </div>
+       
+     </div>
+     <!--HEADER-->
+
+     <div id="main" class="container" >
+
+          <!-- Main Content -->
+          <!--Top Bar-->
+           <div class="row">
+               <div class="span12" >
+                <h2 class="pull-left">Yocto Block Rollout</h2>
+	     <ul class="nav nav-pills topbarnav pull-left">
+	     <li class="active">
+	     <a href="projects_myproject.html">Project</a>
+	     </li>
+	     <li><a href="projects_history.html"><i class="icon-time"></i> History</a></li>
+	     <li><a href="projects_settings.html"><i class="icon-cog"></i> Settings</a></li>
+	     <li><a href="projects_permissions.html"><i class="icon-lock"></i> Permissions</a></li>
+	     </ul>
+               </div>
+          </div>
+          <!--Top Bar-->
+      
+          <div class="row">
+          
+               <!--MAIN WORK AREA-->
+               <div class="span9">
+     
+                    <!--Project List-->
+                    <div class=" grouppods">
+		<h2 class="pull-left">Builds</h2>
+		     <div class="minnav pull-left">
+		     <ul class="nav">
+		     <li class="dropdown">
+		     <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" >Sort by date <span class="caret"></span></a>
+			<ul class="dropdown-menu ">
+			<li>date string</li>
+			<li>date string</li>
+			<li>date string</li>
+			<li>date string</li>
+			</ul>
+		     </li>
+		     </ul>
+		     </div>
+		     
+		     <div class="btn-group pull-right">
+		     <button class="btn">Most Recent</button>
+		     <button class="btn">All</button>
+		     </div>
+		     
+		     <div>
+		     <table class="table mybuildtable">
+                         
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox1" value="option1">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox2" value="option2">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox3" value="option3">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox4" value="option4">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox5" value="option5">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox6" value="option6">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox7" value="option7">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox8" value="option8">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td>
+                         <div class="controls">
+                         <input type="checkbox" id="optionsCheckbox9" value="option9">
+                         </div>
+                         </td>
+                         <td><a href="#">cbigbuild01234212356av</a></td>
+                         <td>3.2 MB</td>
+		     <td>Today 14:22</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+
+                         </table>
+		     </div>
+                         
+		</div>
+          
+     
+               </div>
+               <!--MAIN WORK AREA-->
+     
+               <!--SIDEBAR-->
+               <div class="span3">
+                    
+                    <h4>Project Members</h4>
+		<h4><small>Dev Group</small></h4>
+                    <p><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></p>
+		
+		<h4><small>No Group</small></h4>
+                    <p><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></p>
+		<p><a data-toggle="modal" href="#addpersonModal"><button class="btn"><i class="icon-plus-sign"></i> Add someone to your project</button></a></p>
+		     
+		<p><button class="btn"><i class="icon-plus-sign"></i> Add a group</button></p>
+          
+               </div>
+               <!--SIDEBAR-->
+               
+          </div>
+	
+	<!--CREATE A BUILD-->
+	<div class="row">
+	     <div class="span12">
+		<!--WELL-->
+		<div class="well">
+		     
+		     <!--CAB Header-->
+		     <div class="row">
+			<div class="span12">
+			<h2>Create a build</h2>
+			</div>
+		     </div>
+		     <!--CAB Header-->
+		     
+		     <!--CAB MAIN-->
+		     <div class="row">
+		     
+			
+			<!--LeftSide-->
+			<div class="span7">
+			     
+			     <!--SELECT MACHINE-->
+			     <!--header-->
+			     <div class="row">
+				<div class="span7">
+				<h3>Select a machine</h3>
+				</div>
+			     </div>
+			     <!--header-->
+			     
+			     <!--content-->
+			     <div class="row">	
+				
+				<!--left-->
+				<div class="span3">    
+				<form class="form">
+				<fieldset>
+				     <div class="controls">
+				     <select id="controls">
+				     <option>beagleboard</option>
+				     <option>boogeyboard</option>
+				     <option>beaverboard</option>
+				     </select>
+				     </div>
+				</fieldset>
+				</form>
+				</div>
+				<!--left-->
+				
+				<!--right-->
+				<div class="span4">
+				 <img src="images/logo_beagleboard.png" width="170" height="30" alt="Beagleboard Logo" />
+				 <p>The BeagleBoard is a low-power open source hardware single-board computer produced by Texas Instruments in association with Digi-Key.<br />
+<a href="#">Beagleboard website &#187;</a></p>
+				</div>
+				<!--right-->
+				
+			     </div>
+			     <!--content-->
+			     <!--SELECT MACHINE-->
+			     
+			     <!--SELECT BASE IMG-->
+			     <!--header-->
+			     <div class="row">
+				<div class="span7">
+				<h3>Select a base image</h3>
+				</div>
+			     </div>
+			     <!--header-->
+			     
+			     <!--content-->
+			     <div class="row">
+				
+				<!--left-->
+				<div class="span3">    
+				<form class="form">
+				<fieldset>
+				     <div class="controls">
+				     <select class="controls">
+				     <option>core-image-minimal-dev</option>
+				     <option>skin-image-minimal-dev</option>
+				     <option>stem-image-minimal-dev</option>
+				     <option>seed-image-minimal-dev</option>
+				     </select>
+				     </div>
+				</fieldset>
+				</form>
+				</div>
+				<!--left-->
+				
+				<!--right-->
+				<div class="span4">
+				 <p>This is the lowest spec image you can base your build off of. Good for starting from scratch on your build project.<br />
+				 <a href="#">Read more about this base image &#187;</a></p>
+				</div>
+				<!--right-->
+				
+			     </div>
+			     <!--content-->
+			     <!--SELECT BASE IMG-->
+			     
+
+
+			     <div class="alert alert-info"><a class="close" data-dismiss="alert" href="#">x</a><strong>Heads up!</strong> If you're all ready, you can go straight to building your image. If you want a little more customisation, then you should build your packages first.
+			     </div>
+			     
+			     <hr />
+			     
+			     <div class="row pull-right">
+				<div class="span3">
+				<a data-toggle="modal" href="#buildscheduleModal"><button class="btn btn-large btn-primary" >Build Image</button> <button class="btn btn-large">Build Packages</button></a>
+				</div>
+			     </div>
+			     
+			</div>
+			<!--LeftSide-->
+			
+			<!--CAB Sidebar-->
+			<div class="span4 customwell">
+		     
+			     <div class="row">
+				<div class="span2">
+				<h2>Add Layers</h2>
+				</div>
+				
+				<div class="span2">
+				
+				     <div class="minnav pull-left">
+				     <ul class="nav">
+				     <li class="dropdown">
+				     <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" >Most Used <span class="caret"></span></a>
+					<ul class="dropdown-menu ">
+					<li>option</li>
+					<li>option</li>
+					<li>option</li>
+					<li>option</li>
+					</ul>
+				     </li>
+				     </ul>
+				     </div>
+				</div>
+			     </div>
+					
+					
+					     
+			     <div class="row">
+				<div class="span4">
+				<form class="form-inline">
+				<input type="text" class="input-small" placeholder="Search..." style="width:350px;" />
+				</form>
+				</div>
+			     </div>
+				     
+			     <div class="row">
+			     
+				<div class="span4 pull-left">
+				<form class="form">    
+				<table class="table">
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox1" value="a_option1">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox1">Test layer</label></td>
+				<td><i class="icon-trash"></i></td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox2" value="a_option2">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="optionsCheckbox2">Test layer</label></td>
+				<td><i class="icon-trash"></i></td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox3" value="option3">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox3">Test layer</label></td>
+				<td><i class="icon-trash"></i></td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox4" value="a_option4">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox4">Test layer</label></td>
+				<td><i class="icon-trash"></i></td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox5" value="a_option5">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox5">Test layer</label></td>
+				<td><i class="icon-trash"></i></td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox6" value="a_option6">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox6">Core metadata</label></td>
+				<td>&nbsp;</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox7" value="a_option7">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox7">Core metadata</label></td>
+				<td><i class="icon-delete"></i></td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox8" value="a_option8">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox8">Core metadata</label></td>
+				<td>&nbsp;</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox9" value="a_option9">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox9">Core metadata</label></td>
+				<td>&nbsp;</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox10" value="a_option10">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox10">Core metadata</label></td>
+				<td>&nbsp;</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label class="checkbox">
+				<input type="checkbox" id="a_optionsCheckbox11" value="a_option11">
+				openembedded-core</label>
+				</td>
+				<td><label class="control-label" for="a_optionsCheckbox11">Core metadata</label></td>
+				<td>&nbsp;</td>
+				</tr>
+				
+				</table>
+				</form>
+				</div>
+
+			     </div>
+			     
+			     <div class="row">
+				
+				<div class="span4">
+				     <div class="btn-toolbar">
+					
+					<div class="btn-group">
+					<a href="#"><button class="btn">&#171;</button></a>
+					<a href="#"><button class="btn">1</button></a>
+					<a href="#"><button class="btn">2</button></a>
+					<a href="#"><button class="btn">3</button></a>
+					<a href="#"><button class="btn">4</button></a>
+					<a href="#"><button class="btn">&#187;</button></a>
+					</div>
+					
+					<form class="form">
+					<label>Add Layer by URL</label>
+					<input type="text" class="span3" placeholder="URL">
+					<button type="submit" class="btn">Add</button>
+					<label>Add Layer from external file</label>
+					<input type="text" class="span3" placeholder="Browse for file on your computer">
+					<button type="submit" class="btn">Browse</button>
+					</form>
+				
+				</div>
+				     
+				
+				
+			     </div>
+
+			     </div>
+			     
+			     
+			     
+			</div>
+			<!--CAB Sidebar-->
+
+		   
+		</div>
+		     <!--CAB  MAIN-->
+		     
+		</div>
+		<!--WELL-->
+	     </div>
+	</div>
+	<!--CREATE A BUILD-->
+                
+     </div>
+     <!--Main Content-->
+
+
+<!--Queue Modal Content-->
+<div id="queueModal" class="modal hide">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3>Running Builds</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Build 1</h4>
+              <p>Some information about the build.</p>
+              
+              <div class="progress progress-success">
+                    <div class="bar" style="width: 60%;"></div>
+              </div>
+              
+              <div class="alert alert-success">Done! <a href="#">Download Build 1 here.</a></div>
+
+              <h4>Build 2</h4>
+              <p>Some information about the build.</p>
+              
+              <div class="progress progress-striped
+     active">
+                    <div class="bar " style="width: 60%;"></div>
+              </div>
+              
+              <p><i class="icon-time"></i> 01:23:02 remaining</p>
+
+              <h4>Build 3</h4>
+              <p>Some information about the build.</p>
+
+              <div class="progress progress-striped
+     active">
+                    <div class="bar " style="width: 60%;"></div>
+              </div>
+              
+              <p><i class="icon-time"></i> 01:23:02 remaining</p>
+
+              
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal" >Close</a>
+            </div>
+          </div>
+<!--Queue Modal Content-->
+
+<!--Add Person Modal Content-->
+<div id="addpersonModal" class="modal hide">
+     
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h3>Add someone to your project</h3>
+     </div>
+     
+     <div class="modal-body">
+	
+     <p>Adding someone to your project is easy. They don't have to be a member of your group. Just put in their email, type a message if you like and they'll be sent a message and have an ID automatically created for them.</p>
+	
+     <form class="form">
+     <input type="text" class="input-small" placeholder="Email Address">
+          <div class="controls">
+	<textarea class="input-textarea_modal" id="textarea02" rows="3"></textarea>
+	</div>
+     <button type="submit" class="btn">Clear</button><br />
+     
+     </div>
+     
+     <div class="modal-footer">
+	
+     <a href="#" class="btn" data-dismiss="modal" >Cancel</a>
+     <button class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> Add</button>
+     </form>
+     
+     </div>
+     
+</div>
+<!--Add Person Modal Content-->
+
+<!--Build Schedule Modal Content-->
+<div id="buildscheduleModal" class="modal hide">
+     
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h3>Schedule your build</h3>
+     </div>
+     
+     <div class="modal-body">
+	
+	<div class="alert alert-info">
+	<strong>Hey!</strong> Be sure that everything is set correctly before you schedule to avoide wasting resources.
+	</div>
+	
+     <h4>Image to build</h4>
+         
+         <div class="well">
+	<p><strong>Machine:</strong> beagleboard</p>
+	<p><strong>Base image:</strong> core-image-minimal-dev</p>
+         </div>
+         
+     <button class="btn-primary btn-large">Add to Queue now</button>
+     
+     <hr />
+     
+     <h4>Schedule it for later</h4>
+     <div class="alert alert-error">Devs, please note that a datepicker that plays nicely with modal windows is being looked into</div>
+     <form class="well form-inline">
+     <label>Date</label>
+     <input type="text" class="input-small" placeholder="5/25/12">
+     <label>Time</label>
+     <input type="password" class="input-small" placeholder="12:00">
+     <button type="submit" class="btn btn-primary">Add to Queue</button>
+     </form>
+     </div>
+	
+     <div class="modal-footer">
+     <a href="#" class="btn" data-dismiss="modal" >Cancel</a>
+     </div>
+     
+</div>
+<!--Build Schedule Modal Content-->
+
+    </div><!-- /container -->
+
+
+<footer>
+<p>&copy; The Yocto Project</p>
+ </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+
+  </body>
+</html>

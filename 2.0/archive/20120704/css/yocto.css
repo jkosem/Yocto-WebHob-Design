@@ -1,0 +1,113 @@
+/*Yocto Custom CSS*/
+
+@import url(yocto-theme.css);
+
+/*@import url(/Yocto/assets/css/bootstrap.css);*/
+html, body {height: 100%;}
+body{padding-bottom:0px !important;}
+#wrap {min-height: 100%;}
+div#main {overflow:auto;
+	padding-bottom: 30px;}  /* must be same height as the footer */
+
+
+.navbar .brand{color:#fff;}
+.navbar .nav > li > a, .navbar a{color:#999999;}
+div.nav-collapse form.well {padding:0px !important;width:200px;height:20px;float:left;background:none;}
+form.form-search input{border:0px;margin:7px 0px 0px 20px;width:150px;height:16px;background:#686868;color:#fff;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 0px 0px 
+}
+
+div#top-right-tools {margin-top:10px;display:inline;float:right;}
+div#queue{display:inline;float:left;}
+div#settings, div#user{margin-left:10px;display:inline;float:left;}
+div#user ul.nav {margin:-28px 0px 0px 8px;padding:0px 0px 0px 0px;display:inline;float:left;}
+
+div.yocto-gyro {padding:30px 40px 30px 40px !important;}
+ul.topbarnav {margin-left:30px;}
+
+footer {padding-left:30px;margin-top:-30px;height:30px;line-height:30px;bottom:0;position:relative;color:#fff;clear:both;}
+
+
+table.build_table {width:100%;border: 
+none;border-collapse:collapse;}
+table.build_table tbody {display: table-row-group;
+vertical-align: middle;
+border-color: inherit;}
+table.build_table tr{display: table-row;
+vertical-align: inherit;
+border-color: inherit;text-align:left;}
+table.build_table td {
+padding:8px 0px;
+line-height: 18px;
+text-align: left;
+vertical-align: top;
+border: 0px solid #DDD;
+}
+
+table a {}
+
+table.build_table td.col_one{width:160px;font-weight:bold;}
+table.build_table td.col_two{width:50px;}
+table.build_table td.col_three{width:120px;}
+table.build_table td.col_four{width:150px;}
+table.build_table td.col_five{width:150px;}
+table.build_table td.col_six{width:60px;}
+
+table tr:hover td{
+  background-color: #EDEDED;
+}
+
+.hero-unit_yocto{
+padding: 20px 20px;
+margin-bottom: 30px;
+background-color: #EEE;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+
+ul.homefaq {list-style-type:none;margin: 0 0 9px 0px;}
+ul.homefaq li {margin-bottom:5px;}
+
+ul.homenews {list-style-type:none;margin: 0 0 9px 0px;}
+ul.homenews li {margin-bottom:15px;}
+
+div.grouppods {border-top:1px solid #dddddd;padding:25px 0px 30px 0px;}
+div.tablesattop {border-top:0px solid #dddddd;padding:25px 0px 30px 0px;}
+.customwell {min-height: 20px;
+padding: 19px;
+margin-bottom: 20px;
+background-color: 
+whiteSmoke;
+border: 1px solid 
+#EEE;
+border: 1px solid 
+rgba(0, 0, 0, 0.05);
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px 
+rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 1px 
+rgba(0, 0, 0, 0.05);
+}
+
+td.cb_td_one {width:30px;}
+td.cb_td_two {width:200px;}
+
+td.pi_td_one {width:150px;text-align:right;text-transform:uppercase;}
+
+.inline {display:inline;float:left;}
+.minnav{margin:10px 0px 0px 10px;display:inline;float:left;}
+
+.input-textarea_modal{width:97%;}
+div.modal div.form-actions button {margin-left:10px !important;}
+
+.checkbox_series {width:100%;display:inline;float:left;}
+.check_entry {width:33%;padding:5px 0;display:inline;float:left;}

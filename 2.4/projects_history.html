@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yocto Web Hob</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<!--remove and use @import in css in production-->
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<!--remove and use @import in css in production-->
+<link href="css/yocto.css" rel="stylesheet">
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!--[if !IE 7]>
+<style type="text/css">
+#wrap {display:table;height:100%}
+</style>
+<![endif]-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+	<!--HEADER-->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container aligncenter">			
+				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+				<div class="nav-collapse aligncenter">
+				<ul class="nav">
+					<li><a href="builds.html" class="icon-builds">Builds</a></li>
+					<li><a href="projects.html" class="icon-projects">Projects</a></li>
+					<li><a href="groups.html" class="icon-groups">Groups</a></li>
+				</ul>
+	
+               <!--Top Right Tools-->
+               <div id="top-right-tools">
+             		<ul class="nav">	
+						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
+						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
+							<img src="images/icon_user.png" alt="Username" title="Username" />
+							<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+                              <li><img src="images/avatar_user.png"> UserName</li>
+                              <li class="divider"></li>
+                              <li><button class="btn btn-primary" href="#">Log Out</li>
+                        	</ul>
+						</li>
+					</ul>
+				</div>
+				<!--Top Right Tools-->
+				
+			</div>
+		</div><!--/.nav-collapse -->
+		
+		</div>	
+	</div>
+	<!--HEADER-->
+
+     <div id="main" class="container" >
+
+          <!-- Main Content -->
+          <!--Top Bar-->
+           <div class="row">
+               <div class="span12" >
+               <h1>Projects</h1>
+               <h2 class="pull-left">Yocto Block Rollout</h2>
+	     <ul class="nav nav-pills topbarnav pull-left" style="margin-left:0;">
+	     <li><a href="projects_myproject.html">Project</a></li>
+	     <li class="active"><a href="projects_history.html"><i class="icon-time icon-white"></i> History</a></li>
+	     <li><a href="projects_settings.html"><i class="icon-cog"></i> Settings</a></li>
+	     <li><a href="projects_permissions.html"><i class="icon-lock"></i> Permissions</a></li>
+	     </ul>
+               </div>
+          </div>
+          <!--Top Bar-->
+      
+          <div class="row">
+          
+               <!--MAIN WORK AREA-->
+               <div class="span9">
+     
+                    <!--Project List-->
+                    <div class=" tablesattop">
+		     
+		     <div>
+		     <table class="table">
+                         
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Changed setting on the <strong>Project</strong></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Selected <a href="#">busybox-1.19.4</a> in <strong><a href="#">Features</a></strong></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Invited<i class="icon-user"></i> <a href="#">Joe Thomason</a> to the project</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Add busybox-1.19.4 to  <a href="#">Features</a></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Changed setting on the <strong>Project</strong></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Selected <a href="#">busybox-1.19.4</a> in <strong><a href="#">Features</a></strong></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Invited<i class="icon-user"></i> <a href="#">Joe Thomason</a> to the project</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Add busybox-1.19.4 to  <a href="#">Features</a></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Changed setting on the <strong>Project</strong></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Selected <a href="#">busybox-1.19.4</a> in <strong><a href="#">Features</a></strong></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Invited<i class="icon-user"></i> <a href="#">Joe Thomason</a> to the project</td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+		     
+		     <tr>
+                         <td><a href="#">25 May 2012 14:45 (GMT 0)</a></td>
+		     <td>Add busybox-1.19.4 to  <a href="#">Features</a></td>
+		     <td><a href="#"><i class="icon-user"></i> Bob Woodward</a></td>
+                         </tr>
+
+                         </table>
+		     </div>
+                         
+		</div>
+          
+     
+               </div>
+               <!--MAIN WORK AREA-->
+     
+               <!--SIDEBAR-->
+               <div class="span3">
+                    
+                    <h4>History?</h4>
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		
+		<p><a href="#">More about the build process and how to reduce errors in your builds È</a></p>
+          
+               </div>
+               <!--SIDEBAR-->
+               
+          </div>
+                
+     </div>
+     <!--Main Content-->
+
+
+<!--Queue Modal Content-->
+<div id="queueModal" class="modal hide">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3>Running Builds</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Build 1</h4>
+              <p>Some information about the build.</p>
+              
+              <div class="progress progress-success">
+                    <div class="bar" style="width: 60%;"></div>
+              </div>
+              
+              <div class="alert alert-success">Done! <a href="#">Download Build 1 here.</a></div>
+
+              <h4>Build 2</h4>
+              <p>Some information about the build.</p>
+              
+              <div class="progress progress-striped
+     active">
+                    <div class="bar " style="width: 60%;"></div>
+              </div>
+              
+              <p><i class="icon-time"></i> 01:23:02 remaining</p>
+
+              <h4>Build 3</h4>
+              <p>Some information about the build.</p>
+
+              <div class="progress progress-striped
+     active">
+                    <div class="bar " style="width: 60%;"></div>
+              </div>
+              
+              <p><i class="icon-time"></i> 01:23:02 remaining</p>
+
+              
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal" >Close</a>
+            </div>
+          </div>
+<!--Queue Modal Content-->
+
+    </div><!-- /container -->
+
+
+<footer>
+<p>&copy; The Yocto Project</p>
+ </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yocto Web Hob</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<link href="css/yocto.css" rel="stylesheet">
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!--[if !IE 7]>
+<style type="text/css">
+#wrap {display:table;height:100%}
+</style>
+<![endif]-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+</head>
+
+<body>
+<div id="wrap"> 
+	
+	<!--HEADER-->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container aligncenter">			
+				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+				<div class="nav-collapse aligncenter">
+				<ul class="nav">
+					<li><a href="builds.html" class="icon-builds">Builds</a></li>
+					<li><a href="projects.html" class="icon-projects">Projects</a></li>
+					<li><a href="groups.html" class="icon-groups">Groups</a></li>
+				</ul>
+	
+               <!--Top Right Tools-->
+               <div id="top-right-tools">
+             		<ul class="nav">	
+						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
+						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
+							<img src="images/icon_user.png" alt="Username" title="Username" />
+							<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+                              <li><img src="images/avatar_user.png"> UserName</li>
+                              <li class="divider"></li>
+                              <li><button class="btn btn-primary" href="#">Log Out</li>
+                        	</ul>
+						</li>
+					</ul>
+				</div>
+				<!--Top Right Tools-->
+				
+			</div>
+		</div><!--/.nav-collapse -->
+		
+		</div>	
+	</div>
+	<!--HEADER-->
+	
+	<div id="main" class="container" >
+	
+	<!-- Main Content --> 
+
+
+	<!--Top Bar-->
+	<div class="row">
+		<div class="span12" >
+			<h1 class="pull-left">Yocto Block Rollout</h1>
+			<ul class="nav nav-pills topbarnav pull-left match-h1" style="margin-left:0;">
+				<li><a href="createbuild_packagegroups.html">Package Groups</a></li>
+				<li><a href="createbuild_recipes.html">Recipes</a></li>
+				<li class="active"><a href="createbuild_packages.html">Packages</a></li>
+				<li><a href="createbuild_buildimage.html">Build Image</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--Top Bar-->
+	
+	
+<div class="row"> 
+	
+	<!--MAIN WORK AREA-->
+	<div class="span9">
+		<h2><a href="createbuild_packagegroups.html">Package Groups <i class=" icon-ok"></i></a></h2>
+		<hr />
+		<h2><a href="createbuild_recipes.html">Recipes <i class=" icon-ok"></i></a></h2>
+		<hr />
+	</div>
+	<!--MAIN WORK AREA--> 
+	
+	<!--SIDEBAR-->
+	<div class="span3"> &nbsp; </div>
+	<!--SIDEBAR-->
+
+	</div>
+
+<!--BUILD IMAGE-->
+<div class="row">
+	<div class="span9">
+		<h2>Packages</h2>
+		
+		<!--accordion1-->
+		<div class="" id="accordion1">
+			<table class="build_table">
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Packages</th>
+						<th>Brought in by</th>
+						<th>Size</th>
+					</tr>
+				</thead>
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">base-files-3.0.1.4</a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseOne" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion1--> 
+		
+		<!--accordion2-->
+		<div class="" id="accordion2">
+			<table class="build_table">
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">base-files-3.0.1.4</a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseOne" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion2--> 
+		
+		<!--accordion3-->
+		<div class="" id="accordion3">
+			<table class="build_table">
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">base-files-3.0.1.4</a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseThree" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion3--> 
+		
+		<!--accordion4-->
+		<div class="" id="accordion4">
+			<table class="build_table">
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">base-files-3.0.1.4</a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseFour" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion4--> 
+		
+		<!--accordion5-->
+		<div class="" id="accordion5">
+			<table class="build_table">
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion5" href="#collapseFive">base-files-3.0.1.4</a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseFive" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion5--> 
+		
+		<!--accordion6-->
+		<div class="" id="accordion6">
+			<table class="build_table">
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion6" href="#collapseSix">busybox-1.19.4</a> <a data-toggle="modal" href="#packageinfoModal"><i class="icon-info-sign"></i></a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseSix" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion6--> 
+		
+		<!--accordion7-->
+		<div class="" id="accordion7">
+			<table class="build_table">
+				<tr>
+					<td class="cb_td_one"><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+					<td class="cb_td_two"><label class="checkbox1"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven">base-files-3.0.1.4</a></label></td>
+					<td class="cb_td_three">Bob Woodward</td>
+					<td>244.0 KB</td>
+				</tr>
+			</table>
+			
+			<!--Collapsed-->
+			<div id="collapseSeven" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-syslog</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="optionsCheckbox1" value="option1" checked="yes" /></td>
+							<td><label class="checkbox1">busybox-udhcpc</label></td>
+							<td>Bob Woodward</td>
+							<td>244.0 KB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--Collapsed--> 
+			
+		</div>
+		<!--accordion7-->
+		
+		<p>&nbsp;</p>
+		<a href="createbuild_buildimage.html" type="submit" class="btn btn-primary btn-large"><i class="icon-fire icon-white"></i> Build Image</a>
+		&nbsp;<a href="#"><i class=" icon-remove"></i> Cancel</a> </div>
+	
+	<!--SIDEBAR-->
+	<div class="span3">
+		<div class="well">
+			<h4>Packages</h4>
+			<p>base-files-3.0.1.4<br />
+				base-password-3.5<br />
+				busybox-1.19.4<br />
+				eglib-2.13-r16<br />
+				base-files-3.0.1.4<br />
+				base-password-3.5<br />
+				busybox-1.19.4<br />
+				initscripts-1.0<br />
+				Kbd-1.5.2<br />
+				initscripts-1.0<br />
+				busyboxertest-0.6.2<br />
+				busyboxertest-0.6.3.2</p>
+			<p><i class="icon-folder-open"></i> estimated size 3.19MB</p>
+		</div>
+	</div>
+	<!--SIDEBAR--> 
+</div>
+<!--BUILD IMAGES-->
+<div class="span9" style="margin-left:0;">
+<hr />
+<h2><a href="createbuild_buildimage.html">Build Image</a></h2>
+</div>
+</div>
+<!--Main Content--> 
+
+<!--Queue Modal Content-->
+<div id="queueModal" class="modal hide">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>Running Builds</h3>
+	</div>
+	<div class="modal-body">
+		<h4>Build 1</h4>
+		<p>Some information about the build.</p>
+		<div class="progress progress-success">
+			<div class="bar" style="width: 60%;"></div>
+		</div>
+		<div class="alert alert-success">Done! <a href="#">Download Build 1 here.</a></div>
+		<h4>Build 2</h4>
+		<p>Some information about the build.</p>
+		<div class="progress progress-striped
+     active">
+			<div class="bar " style="width: 60%;"></div>
+		</div>
+		<p><i class="icon-time"></i> 01:23:02 remaining</p>
+		<h4>Build 3</h4>
+		<p>Some information about the build.</p>
+		<div class="progress progress-striped
+     active">
+			<div class="bar " style="width: 60%;"></div>
+		</div>
+		<p><i class="icon-time"></i> 01:23:02 remaining</p>
+	</div>
+	<div class="modal-footer"> <a href="#" class="btn" data-dismiss="modal" >Close</a> </div>
+</div>
+<!--Queue Modal Content--> 
+
+<!--Package Info Modal Content-->
+<div id="packageinfoModal" class="modal hide">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>busybox-1.19.4</h3>
+	</div>
+	<div>
+		<table class="table" style="text-align:right;">
+			<tr>
+				<td class="pi_td_one">Summary</td>
+				<td>Tiny versions of many common UNIX utilities in a single small executable.</td>
+			</tr>
+			<tr>
+				<td class="pi_td_one">Description</td>
+				<td>BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in GNU fileutils, shellutils, etc. The utilities in BusyBox generally have fewer options than their full-featured GNU cousins; however, the options that are included provide the expected functionality and behave very much like their GNU counterparts. BusyBox provides a fairly complete POSIX environment for any small or embedded system.</td>
+			</tr>
+			<tr>
+				<td class="pi_td_one">Homepage</td>
+				<td><a href="#">http://www.busybox.net</a></td>
+			</tr>
+			<tr>
+				<td class="pi_td_one">Bugtracker</td>
+				<td><a href="#">https://bugs.busybox.net/</a></td>
+			</tr>
+			<tr>
+				<td class="pi_td_one">License</td>
+				<td>GPLv2 & BSD-4-Clause</td>
+			</tr>
+			<tr>
+				<td class="pi_td_one">Section</td>
+				<td>base</td>
+			</tr>
+		</table>
+	</div>
+	<div class="modal-footer"> <a href="#"><i class=" icon-remove"></i> Cancel</a> &nbsp; <a href="#" class="btn" data-dismiss="modal" >Close</a> </div>
+</div>
+<!--Package Info Modal Content-->
+</div>
+<!-- /container -->
+
+<footer>
+	<p>&copy; The Yocto Project</p>
+</footer>
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="../assets/js/jquery.js"></script> 
+<script src="../assets/js/bootstrap-transition.js"></script> 
+<script src="../assets/js/bootstrap-alert.js"></script> 
+<script src="../assets/js/bootstrap-modal.js"></script> 
+<script src="../assets/js/bootstrap-dropdown.js"></script> 
+<script src="../assets/js/bootstrap-scrollspy.js"></script> 
+<script src="../assets/js/bootstrap-tab.js"></script> 
+<script src="../assets/js/bootstrap-tooltip.js"></script> 
+<script src="../assets/js/bootstrap-popover.js"></script> 
+<script src="../assets/js/bootstrap-button.js"></script> 
+<script src="../assets/js/bootstrap-collapse.js"></script> 
+<script src="../assets/js/bootstrap-carousel.js"></script> 
+<script src="../assets/js/bootstrap-typeahead.js"></script>
+</body>
+</html>

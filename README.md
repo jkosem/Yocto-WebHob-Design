@@ -37,4 +37,5 @@ Additional info
 -------------------
 
 <a href="https://wiki.yoctoproject.org/wiki/Yocto_1.3_Web_Hob">Wiki with more information on the current WebHob design</a>
+
 <a href="https://wiki.yoctoproject.org/wiki/images/4/43/Yocto_webHob.2.4_screencast.0.3.mov">Screencast describing the WebHob design</a>

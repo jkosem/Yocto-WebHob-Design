@@ -36,38 +36,43 @@
 	<!--HEADER-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container aligncenter">			
-				<a class="brand" href="index_dashboard.html">&nbsp;</a>
-				<div class="nav-collapse aligncenter">
-				<ul class="nav">
+			<div class="container">	
+ 				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+			
+				<ul class="nav" style="text-align:center;">
+					<!--SET THE ACTIVE SECTION by adding class="active"-->
 					<li><a href="builds.html" class="icon-builds">Builds</a></li>
 					<li><a href="projects.html" class="icon-projects">Projects</a></li>
 					<li><a href="groups.html" class="icon-groups">Groups</a></li>
 				</ul>
-	
-               <!--Top Right Tools-->
-               <div id="top-right-tools">
-             		<ul class="nav">	
-						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
-						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
-						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
-							<img src="images/icon_user.png" alt="Username" title="Username" />
-							<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-                              <li><img src="images/avatar_user.png"> UserName</li>
-                              <li class="divider"></li>
-                              <li><button class="btn btn-primary" href="#">Log Out</li>
-                        	</ul>
-						</li>
-					</ul>
-				</div>
-				<!--Top Right Tools-->
-				
-			</div>
-		</div><!--/.nav-collapse -->
 		
+			
+             <!--Top Right Tools-->
+             <div id="top-right-tools">
+           		<ul class="nav">	
+					<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+					<li><a data-toggle="modal" href="#queueModal">
+						<span class="badge badge-success" style="float:right;margin-left:-2px;">2</span>
+						<img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" />
+						</a></li>
+					<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" style="width:48px; height:48px; margin-top:-8px; background-image:url('images/icon_user.png');">
+						<span class="caret"> </span>
+						</a>
+						<ul class="dropdown-menu pull-right">
+                            <li><img src="images/icon_user.png">&nbsp; <strong>John Doe</strong></li>
+                            <li class="divider"></li>
+                            <li><a href = "#">Settings</a></li>
+                            <li><a href = "#">Account details</a></li>
+                            <li class="divider"></li>
+                            <li><button class="btn btn-primary" href="index.html">Log Out</button></li>
+	                    </ul>
+					</li>
+				</ul>
+			</div>
+			<!--Top Right Tools-->
+			</div>
 		</div>	
+			
 	</div>
 	<!--HEADER-->
         
@@ -78,7 +83,7 @@
           
 	     <div class="row">
 		<div class="span8">
-		<h2 class="inline"><a href="builds.html">Builds</a></h2>
+		<h2 class="inline"><a href="builds.html"><img src="images/icon_builds_48.png" alt="" class="glyph"/> Builds</a></h2>
 			<ul class="nav nav-pills pull-right">
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Sort by date <b class="caret"></b></a>
@@ -103,13 +108,13 @@
 		<div class="span8">
 		<!--MY BUILDS-->
 	     <div class="alert alert-success">
-	     <strong>All done! </strong>You have successfully made an image with everything you picked.<button type="button" class="close" data-dismiss="alert">x</button>
+	     <strong>All done! </strong>You have successfully made an image with everything you picked.<button type="button" class="close" data-dismiss="alert">&times;</button>
 	     </div> 
 		
 		<!--BUILD STATUSES-->
 		
 		<!--Build Status1-->
-		<p><a href="#"><i class="icon-book"></i> core-image-minimal-atom-pc=11233768765</a></p>
+		<p><i class="icon-book"></i> core-image-minimal-atom-pc=11233768765</p>
 		     <div class="row">
 		     
 			<div class="span4">
@@ -118,7 +123,7 @@
 			     </div>
 			</div>
 			
-			<div class="span2 copy12">3.2 MB
+			<div class="span2 copy12"><strong>3.2MB</strong>
 			</div>
 			
 			<div class="span2 copy12">
@@ -138,11 +143,11 @@
 			     </div>
 			</div>
 			
-			<div class="span2 copy12">estimated size 3.19 MB
+			<div class="span2 copy12">estimated size <strong>3.19MB</strong>
 			</div>
 			
 			<div class="span2 copy12">
-			<i class="icon-time"></i>12 minutes left
+			<i class="icon-time"></i><strong> 12 minutes</strong> left
 			</div>	
 		     
 		     </div>
@@ -158,11 +163,11 @@
 			     </div>
 			</div>
 			
-			<div class="span2 copy12">estimated size 3.13 MB
+			<div class="span2 copy12">estimated size <strong>3.13MB</strong>
 			</div>
 			
 			<div class="span2 copy12">
-			<i class="icon-time"></i>45 minutes left
+			<i class="icon-time"></i> <strong>45 minutes </strong>left
 			</div>	
 		     
 		     </div>
@@ -176,7 +181,7 @@
 		<tr>
                     <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
                     <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
-                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_three">12/02/2012 14:23</td>
                     <td class="col_four"><span class="label">Big Project</span></td>
                     <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
                     </tr>
@@ -184,7 +189,7 @@
 		<tr>
                     <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
                     <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
-                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_three">12/02/2012 14:23</td>
                     <td class="col_four"><span class="label">Big Project</span></td>
                     <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
                     </tr>
@@ -192,7 +197,7 @@
 		<tr>
                     <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
                     <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
-                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_three">12/02/2012 14:23</td>
                     <td class="col_four"><span class="label">Big Project</span></td>
                     <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
                     </tr>
@@ -200,15 +205,15 @@
 		<tr>
                     <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
                     <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
-                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
-                    <td class="col_four"><span class="label">Big Project</span></td>
+                    <td class="col_three">12/02/2012 14:23</td>
+                    <td class="col_four"><span class="label label-success">Big Project 2</span></td>
                     <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
                     </tr>
 		
 		<tr>
                     <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
                     <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
-                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
+                    <td class="col_three">12/02/2012 14:23</td>
                     <td class="col_four"><span class="label label-important">Yocto Block rollout</span></td>
                     <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
                     </tr>
@@ -216,8 +221,8 @@
 		<tr>
                     <td class="col_one"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">bigbuild01234545689av</a></td>
                     <td class="col_two"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">2.1MB</a></td>
-                    <td class="col_three"><a href="#">12/02/2012 14:23</a></td>
-                    <td class="col_four"><span class="label">Big Project</span></td>
+                    <td class="col_three">12/02/2012 14:23</td>
+                    <td class="col_four"><span class="label label-info">Big Project 3</span></td>
                     <td class="col_five"><i class="icon-user"></i> <a href="#">Bob Woodward</a></td>
                     </tr>
                     </table>
@@ -227,7 +232,7 @@
 			
 			<div class="span4">
 			     <div class="well2">
-			     <h2><a href="groups.html">My Groups</a></h2>
+			     <h2 style="margin-top=-30px;"><a href="groups.html"><span class="glyph enclosed">o</span> My Groups</a></h2>
 			     <ul>
 			     <li><a href="#">Dev Group</a></li>
 			     <li><a href="#">Internal QA Group</a></li>
@@ -240,7 +245,7 @@
 			
 			<div class="span4">
 			<div class="well2">
-			     <h2><a href="projects.html">My Projects</a></h2>
+			     <h2 style="margin-top=-30px;"><a href="projects.html"><span class="glyph enclosed">c</span> My Projects</a></h2>
 			     <ul>
 			    	 <li><a href="#">Big Project</a></li>
 			 	    <li><a href="#">Yocto Block Rollout</a></li>
@@ -259,29 +264,30 @@
           
           <div class="span4">
                <div class="well">
-               <h3>Yocto News</h3>
+               <h3 style="margin-top=-30px;"><span class="glyph enclosed small">l</span> Yocto News</h3>
                <ul class="homenews">
-                    <li><a href="#">Documentation? They call it code for a reason.</a> - Elizabeth Flanagan - 18 May 2012 - 10:54</li>
-                    <li><a href="#">Build Appliance: Eating Your Own Dog Food</a> - Saul Wold - 7 May 2012 - 13:04</li>
-                    <li><a href="#">Yocto Project 1.2 Now Available</a> - Jeffrey Osier-Mixon - 30 Apr 2012 - 17:11</li>
-                    <li><a href="#">A quick Yocto-grid</a> - David Stewart - 24 Apr 2012 - 08:44</li>
-                    <li><a href="#">The Yocto-yumminess of our BSPs</a> - David Stewart - 6 Apr 2012 - 16:21</li>
-                    <li><a href="#">more &#187l</a></li>
+                    <li><a href="#"><strong>Documentation? They call it code for a reason</strong>.</a> - Elizabeth Flanagan - 18 May 2012 - 10:54</li>
+                    <li><a href="#"><strong>Build Appliance: Eating Your Own Dog Food</strong></a> - Saul Wold - 7 May 2012 - 13:04</li>
+                    <li><a href="#"><strong>Yocto Project 1.2 Now Available</strong></a> - Jeffrey Osier-Mixon - 30 Apr 2012 - 17:11</li>
+                    <li><a href="#"><strong>A quick Yocto-grid</strong></a> - David Stewart - 24 Apr 2012 - 08:44</li>
+                    <li><a href="#"><strong>The Yocto-yumminess of our BSPs</strong></a> - David Stewart - 6 Apr 2012 - 16:21</li>
+                    <li><a href="#"><strong>More &raquo;</strong></a></li>
                     </ul>
                </div>
 	     
 	     <div class="well">
-               <h3>Latest Activity</h3>
-               <p><a href="#">Yesterday 14:45</a><br />
-	     Changed settings on <span class="label label-important">Yocto Block rollout</span></p>
-	     <p><a href="#">Yesterday 14:43</a><br />
-	     Selected <a href="#">busybox-1.19.4</a> in <a href="#">Features</a></p>
+               <h3><span class="glyph enclosed small">l</span> Latest Activity</h3>
+ 				<ul class="homenews">
+               		<li><p><a href="#">Yesterday 14:45</a><br />
+	     Changed settings on <span class="label label-important">Yocto Block rollout</span></p></li>
+	     			<li><p><a href="#">Yesterday 14:43</a><br />
+	     Selected <a href="#">busybox-1.19.4</a> in <a href="#">Features</a></p></li>
 	     
-	     <p><a href="#">Two days ago at 14:35</a><br />
-	     Invited <a href="#"><i class="icon-user"></i> Joe Thomason</a> <span class="label label-important">Yocto Block rollout</span></p>
+	     			<li><p><a href="#">Two days ago at 14:35</a><br />
+	     Invited <a href="#"><i class="icon-user"></i> Joe Thomason</a> <span class="label label-important">Yocto Block rollout</span></p></li>
 	     
-	     <p><a href="#">25 May 2012 14:15</a><br />
-	     Added <a href="#">busybox-1.19.4</a> in <a href="#">Features</a></p>
+	     			<li><p><a href="#">25 May 2012 14:15</a><br />
+	     Added <a href="#">busybox-1.19.4</a> in <a href="#">Features</a></p></li>
                </div>
                
           </div> 
@@ -422,8 +428,27 @@
 </div>
 
 <footer>
-<p>&copy; The Yocto Project</p>
- </footer>
+	<div class="container" >
+		<div class="row">
+			<div class="span3" style="opacity:.65;">
+				<p>&copy; 2012 The Yocto Project</p>
+			</div>
+			<div class="span3">
+					<a href="#">About</a>
+					<a href="#">Blogs</a>
+					<a href="#">Documentation</a>
+			</div>
+			<div class="span3">
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Service</a>
+				<a href="#">Trademarks</a>
+			</div>
+			<div class="span3">
+				<a href="http://www.linuxfoundation.org" style="height:66px"><img src="images/linux_foundation.png" alt="Linux Foundation"/></a>
+			</div>
+		</div>
+	</div>
+</footer>
 
     <!-- Le javascript
     ================================================== -->

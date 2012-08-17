@@ -5,9 +5,10 @@
 /*@import url(/Yocto/assets/css/bootstrap.css);*/
 html, body {height: 100%;}
 body{padding-bottom:0px !important;}
-#wrap {min-height: 100%; margin-bottom:30px;}
-div#main {overflow:auto;
-	padding-bottom: 30px;}  /* must be same height as the footer */
+#wrap {min-height: 100%; padding-bottom:-164px;}
+div#main {
+	/*overflow:auto;*/
+	padding-bottom: 164px;}  /* must be same height as the footer */
 
 
 .navbar .brand{color:#fff;}
@@ -52,17 +53,19 @@ table tr:hover td{
   background-color: #EDEDED;
 }
 
-.hero-unit_yocto{
-padding: 20px 20px;
-margin-bottom: 30px;
-background-color: #EEE;
--webkit-border-radius: 6px;
--moz-border-radius: 6px;
-border-radius: 6px;
+ul.homefaq {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
 }
 
-ul.homefaq {list-style-type:none;margin: 0 0 9px 0px;}
-ul.homefaq li {margin-bottom:5px;}
+ul.homefaq li {
+	background-image: url('../images/questionmark.png');
+	background-repeat: no-repeat;
+	background-position: 0px 5px; 
+	padding-left: 27px;
+	margin-bottom:5px;
+}
 
 ul.homenews {list-style-type:none;margin: 0 0 9px 0px;}
 ul.homenews li {margin-bottom:15px;}

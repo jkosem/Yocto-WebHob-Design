@@ -35,10 +35,11 @@
 }
 
 /* CSS to style glyphs */
-.glyph {line-height: 1; font-size:36px; }
+.glyph {line-height: 1; font-size:36px;}
 .glyph.social { font-family: "FoundationIconsSocial"; }
 .glyph.general { font-family: "FoundationIconsGeneral"; }
 .glyph.enclosed { font-family: "FoundationIconsGeneralEnclosed"; }
+.glyph.small { font-size:24px; }
 
 * {
 	-webkit-font-smoothing: antialiased;
@@ -49,7 +50,7 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
-	letter-spacing: -.02em;
+	letter-spacing: -.04em;
 	color: #404754;
 	background-color: #faf8f5;
 	-webkit-font-smoothing: antialiased;
@@ -57,8 +58,8 @@ body {
 }
 
 a {
-  color: #3b96d9;
-  text-decoration: none;
+  	color: #3b96d9;
+  	text-decoration: none;
 }
 
 a:hover {
@@ -75,6 +76,7 @@ h1 {
 	margin-bottom:36px;
 	margin-top:18px;
 	margin-right: 30px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 
@@ -86,8 +88,18 @@ h2 {
 	letter-spacing:-.03em;
 	margin-bottom:18px;
 	margin-right:30px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
+h2 > a {
+  	color: #404754;
+  	text-decoration: none;
+}
+
+h2 > a:hover {
+  color: #404754;
+  text-decoration: underline;
+}
 
 h3 {
 	font-family:"News Cycle", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -96,10 +108,47 @@ h3 {
 	line-height: 24px;
 	letter-spacing:-.02em;
 	margin-bottom:18px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 h4 {
+	font-family:"News Cycle", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	font-size: 18px;
 	margin-bottom: 12px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.intro {
+	font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:white;
+	font-weight:bold;
+	font-size: 60px;
+	letter-spacing:-.08em;
+	padding:47px 0 0 0;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.intro-txt {
+	vertical-align: middle;
+	font-family:"News Cycle", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	font-size: 24px;
+	margin-right:10px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.hero-unit_yocto{
+	width: 100%;
+	min-width:480px;
+	height: 486px;
+	margin-top: -18px;
+	background-image: url("../images/hero_bg.jpg"); 
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: #d9e4e6;
+	text-align: center;
+	margin-bottom: 30px;
 }
 
 .well {
@@ -108,9 +157,9 @@ h4 {
 	background-color: rgba(64, 71, 84, .05);
 	
 	box-shadow:none;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 0px rgba(255, 255, 255, 0.75);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 0px rgba(255, 255, 255, 0.75);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 0px rgba(255, 255, 255, 0.75);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 0px rgba(255, 255, 255, 0.75);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 0px rgba(255, 255, 255, 0.75);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 0px rgba(255, 255, 255, 0.75);
 	
 	
 	-webkit-border-radius: 3px;
@@ -149,11 +198,11 @@ h4 {
   background-color: #fffefa;
   *background-color: #fffefa;
 
-  -webkit-transition: background-color 0.1s linear;
-     -moz-transition: background-color 0.1s linear;
-      -ms-transition: background-color 0.1s linear;
-       -o-transition: background-color 0.1s linear;
-          transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.05s linear;
+     -moz-transition: background-color 0.05s linear;
+      -ms-transition: background-color 0.05s linear;
+       -o-transition: background-color 0.05s linear;
+          transition: background-color 0.05s linear;
 }
 
 .btn.active,
@@ -222,8 +271,7 @@ h4 {
      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 1px rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.15);
 	      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 1px rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.15);
   background-image: none;
-  
-
+ 
   -webkit-transition: background-color 0.1s linear;
      -moz-transition: background-color 0.1s linear;
       -ms-transition: background-color 0.1s linear;
@@ -471,6 +519,12 @@ h4 {
   *z-index: 2;
   margin-bottom: 18px;
   overflow: visible;
+	webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .navbar-fixed-top,
@@ -504,17 +558,24 @@ h4 {
   background-position: top left;
   background-repeat: no-repeat;
   opacity:.85;
+  -webkit-transition: opacity 0.1s linear;
+     -moz-transition: opacity 0.1s linear;
+      -ms-transition: opacity 0.1s linear;
+       -o-transition: opacity 0.1s linear;
+          transition: opacity 0.1s linear;
 }
 
 .navbar .brand:hover {
   opacity:1;
+  -webkit-transition: opacity 0.1s linear;
+     -moz-transition: opacity 0.1s linear;
+      -ms-transition: opacity 0.1s linear;
+       -o-transition: opacity 0.1s linear;
+          transition: opacity 0.1s linear;
 }
 
 .navbar .nav {
   position: relative;
-  left: 10%;
-  display: block;
-  float: left;
   margin: 0 10px 0 0;
   text-align: center;
   padding-top: 18px;
@@ -530,10 +591,27 @@ h4 {
 	background-position: top center;
   	background-repeat: no-repeat;
   	opacity:.65;
+  -webkit-transition: opacity 0.1s linear;
+     -moz-transition: opacity 0.1s linear;
+      -ms-transition: opacity 0.1s linear;
+       -o-transition: opacity 0.1s linear;
+          transition: opacity 0.1s linear;
 }
 
 .navbar .nav > li > a:hover {
   	opacity:1;
+  -webkit-transition: opacity 0.1s linear;
+     -moz-transition: opacity 0.1s linear;
+      -ms-transition: opacity 0.1s linear;
+       -o-transition: opacity 0.1s linear;
+          transition: opacity 0.1s linear;
+}
+
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover {
+  	opacity:1;
+	background-color: transparent;
 }
 
 .navbar .icon-builds {
@@ -559,12 +637,12 @@ div#top-right-tools {
 }
 
 div#top-right-tools .nav > li > a{
-	width: 54px;
+	width: 52px;
 	padding-top: 0;
 }
 
 div#top-right-tools .caret{
-	margin-top: 14px;
+	margin: 24px 0 0 52px;
 }
 
 input,
@@ -585,21 +663,51 @@ textarea {
 }
 
 footer {
-	padding-left:30px;
-	padding-top:6px;
-	margin-top:-30px;
-	height:36px;
-	bottom:6px;
+	position: relative;
+	margin-top: -124px; 
+	height: 100px;
+	clear:both;	
+	background-color: #22262d;
+	padding-top:24px;
+/*	display:block;
 	position:relative;
 	clear:both;
+	bottom: 120px;
+	width:100%;
+	left:0;
+	background-color: #22262d;*/
 }
 
-
 footer, footer p {
-	background-color: #22262d;
 	font-family: "News Cycle", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	color:#fff;
+}
+
+footer a {
+	font-weight:bold;
+  	color: #fff;
+	display:block;
+	height:24px;
+  	text-decoration: none;
+  	opacity:.75;
+  	-webkit-transition: opacity 0.1s linear;
+	     -moz-transition: opacity 0.1s linear;
+	      -ms-transition: opacity 0.1s linear;
+	       -o-transition: opacity 0.1s linear;
+	          transition: opacity 0.1s linear;
+}
+
+footer a:hover {
+	font-weight:bold;
+  	color: #fff;	
+  	opacity:1;
+  	text-decoration: none;
+  	-webkit-transition: opacity 0.1s linear;
+	     -moz-transition: opacity 0.1s linear;
+	      -ms-transition: opacity 0.1s linear;
+	       -o-transition: opacity 0.1s linear;
+	          transition: opacity 0.1s linear;
 }
 
 li {
@@ -687,6 +795,9 @@ input[type="color"],
   font-size: 14px;
   line-height: 18px;
   color: #555555;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 1px 0 rgba(255, 255, 255, 0.65);
+	     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 1px 0 rgba(255, 255, 255, 0.65);
+	          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 select {
@@ -783,6 +894,10 @@ hr {
 	padding-top: 18px;
 }
 
+.modal-body {
+	padding-bottom: 18px;
+}
+
 .well2 {
 	padding:19px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
@@ -792,6 +907,15 @@ hr {
 	border-radius: 3px;
 }
 
+.well2 ul {list-style-type:none; margin:24px 0 12px 0;}
+.well2 ul li {font-weight:bold; margin:12px 0 12px 0;}
+
 .mybuildtable {
 	clear:both;
 }
+
+.modal-backdrop {
+  background-color: #22262d;
+}
+
+

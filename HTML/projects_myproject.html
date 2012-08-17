@@ -37,38 +37,43 @@
 	<!--HEADER-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container aligncenter">			
-				<a class="brand" href="index_dashboard.html">&nbsp;</a>
-				<div class="nav-collapse aligncenter">
-				<ul class="nav">
+			<div class="container">	
+ 				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+			
+				<ul class="nav" style="text-align:center;">
+					<!--SET THE ACTIVE SECTION by adding class="active"-->
 					<li><a href="builds.html" class="icon-builds">Builds</a></li>
-					<li><a href="projects.html" class="icon-projects">Projects</a></li>
+					<li class="active"><a href="projects.html" class="icon-projects">Projects</a></li>
 					<li><a href="groups.html" class="icon-groups">Groups</a></li>
 				</ul>
-	
-               <!--Top Right Tools-->
-               <div id="top-right-tools">
-             		<ul class="nav">	
-						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
-						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
-						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
-							<img src="images/icon_user.png" alt="Username" title="Username" />
-							<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-                              <li><img src="images/avatar_user.png"> UserName</li>
-                              <li class="divider"></li>
-                              <li><button class="btn btn-primary" href="#">Log Out</li>
-                        	</ul>
-						</li>
-					</ul>
-				</div>
-				<!--Top Right Tools-->
-				
-			</div>
-		</div><!--/.nav-collapse -->
 		
+			
+             <!--Top Right Tools-->
+             <div id="top-right-tools">
+           		<ul class="nav">	
+					<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+					<li><a data-toggle="modal" href="#queueModal">
+						<span class="badge badge-success" style="float:right;margin-left:-2px;">2</span>
+						<img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" />
+						</a></li>
+					<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" style="width:48px; height:48px; margin-top:-8px; background-image:url('images/icon_user.png');">
+						<span class="caret"> </span>
+						</a>
+						<ul class="dropdown-menu pull-right">
+                            <li><img src="images/icon_user.png">&nbsp; <strong>John Doe</strong></li>
+                            <li class="divider"></li>
+                            <li><a href = "#">Settings</a></li>
+                            <li><a href = "#">Account details</a></li>
+                            <li class="divider"></li>
+                            <li><button class="btn btn-primary" href="index.html">Log Out</button></li>
+	                    </ul>
+					</li>
+				</ul>
+			</div>
+			<!--Top Right Tools-->
+			</div>
 		</div>	
+			
 	</div>
 	<!--HEADER-->
 
@@ -76,7 +81,7 @@
 
           <!-- Main Content -->
           <!--Top Bar-->
-         <h1>Projects</h1>         
+         <h1><span class="glyph enclosed" style="vertical-align:top;">c</span> Projects</h1>        
          
          <div class="row">
                <div class="span12" >
@@ -85,9 +90,9 @@
 	     <li class="active">
 	     <a href="projects_myproject.html">Project</a>
 	     </li>
-	     <li><a href="projects_history.html"><i class="icon-time"></i> History</a></li>
-	     <li><a href="projects_settings.html"><i class="icon-cog"></i> Settings</a></li>
-	     <li><a href="projects_permissions.html"><i class="icon-lock"></i> Permissions</a></li>
+	     <li><a href="projects_history.html"><i class="icon-time icon-blue"></i> History</a></li>
+	     <li><a href="projects_settings.html"><i class="icon-cog icon-blue"></i> Settings</a></li>
+	     <li><a href="projects_permissions.html"><i class="icon-lock icon-blue"></i> Permissions</a></li>
 	     </ul>
                </div>
           </div>
@@ -100,7 +105,7 @@
      
                     <!--Project List-->
                     <div class=" grouppods">
-		<h3 class="pull-left" style="clear:both;">Builds</h3>		     
+		<h3 class="pull-left" style="clear:both;"><img src="images/icon_builds_48.png" alt="" class="glyph" style="width: 24px; height: 24px; vertical-align: middle;"> Builds</h3>		     
 		     
 		
 		    <ul class="nav nav-pills pull-right">
@@ -242,17 +247,17 @@
                <div class="span3">
                     
                     <h4>Project Members</h4>
-		<h4><small>Dev Group</small></h4>
-                    <p><a href="#" rel="tooltip" title="Bob Woodward" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a>
-                    <a href="#" rel="tooltip" title="Mike Tompkins" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a>
-                    <a href="#" rel="tooltip" title="Bill Watson" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a>
-                    <a href="#" rel="tooltip" title="Alex Manaman" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a>
-                    <a href="#" rel="tooltip" title="Todd Rama" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a>
+		<p><small>Dev Group</small></p>
+                    <p><a href="#" rel="tooltip" title="Todd Rama" class="tooltip-test"><img src="images/user8.png" alt="user name" width="36" height="36" /></a>
+					<a href="#" rel="tooltip" title="Tim Marsh" class="tooltip-test"><img src="images/user3.png" alt="user name" width="36" height="36" /></a>
+					<a href="#" rel="tooltip" title="Alex Cheng" class="tooltip-test"><img src="images/user4.png" alt="user name" width="36" height="36" /></a>
+					<a href="#" rel="tooltip" title="Bob Woodward" class="tooltip-test"><img src="images/user.png" alt="user name" width="36" height="36" /></a>
+					<a href="#" rel="tooltip" title="External guy" class="tooltip-test"><img src="images/user5.png" alt="user name" width="36" height="36" /></a></p>
 		
-		<h4><small>No Group</small></h4>
-                    <p><a href="#" rel="tooltip" title="External guy" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a>
-                    <a href="#" rel="tooltip" title="External guy" class="tooltip-test"><img src="images/avatar_user.png" alt="user name" width="36" height="36" /></a></p>
-		<p><a data-toggle="modal" href="#addpersonModal"><button class="btn"><i class="icon-plus-sign"></i> Add someone to your project</button></a></p>
+		<p><small>No Group</small></p>
+                    <p><a href="#" rel="tooltip" title="Mary Jones" class="tooltip-test"><img src="images/user2.png" alt="user name" width="36" height="36" /></a>
+					<a href="#" rel="tooltip" title="Bill Watson" class="tooltip-test"><img src="images/user6.png" alt="user name" width="36" height="36" /></a></p>
+		<p><a data-toggle="modal" href="#addpersonModal"><button class="btn"><i class="icon-plus-sign"></i> Add a new member</button></a></p>
 		 <form class="form"> 
 		 <select id="select_addgroup">
 		<option>Add a group</option>
@@ -270,7 +275,7 @@
 	<div class="row">
 	     <div class="span12">
 		<!--WELL-->
-		<div class="well">
+		<div class="">
 		     
 		     <!--CAB Header-->
 		     <div class="row">
@@ -369,7 +374,7 @@
 			     
 
 
-			     <div class="alert alert-info"><strong>Heads up!</strong> If you're all ready, you can go straight to building your image. If you want a little more customisation, then you should build your packages first.<a class="close" data-dismiss="alert" href="#">x</a>
+			     <div class="alert alert-info"><strong>Heads up!</strong> If you're all ready, you can go straight to building your image. If you want a little more customisation, then you should build your packages first.<a class="close" data-dismiss="alert" href="#">&times;</a>
 			     </div>
 			     
 			     <hr />
@@ -384,32 +389,20 @@
 			<!--CAB Sidebar-->
 			<div class="span4 well2">
 		     
-			     <div class="row">
-				<div class="span2" style="width:180px;">
-				<h2>Add Layers</h2>
-				</div>
+				<ul class="nav nav-pills pull-right">
+
+					<li class="dropdown" style="margin-top: -16px;">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Most recent <b class="caret"></b></a>
+						<ul class="dropdown-menu" style="margin-top: 5px;">
+							<li><a href="#">Option 1</a></li>
+							<li><a href="#">Option 2</a></li>
+						</ul>
+					</li>
+				</ul>
 				
-				<div class="span2" style="width:160px;">
-				
-				     <div class="minnav pull-left">
-				     <ul class="nav">
-				     <li class="dropdown">
-				     <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" >Most Used <span class="caret"></span></a>
-					<ul class="dropdown-menu ">
-					<li><a href="#">Option</a></li>
-					<li><a href="#">Option</a></li>
-					<li><a href="#">Option</a></li>
-					<li><a href="#">Option</a></li>
-					</ul>
-				     </li>
-				     </ul>
-				     </div>
-				</div>
-			     </div>
-					
-					
-					     
-			     <div class="row">
+				<h2 style="width:150px;">Add Layers</h2>
+								
+				<div class="row">
 				<div class="span4">
 				<form class="form-inline">
 				<input type="text" class="input-small" placeholder="Search..." style="width:95%;" />
@@ -542,16 +535,18 @@
 			     <div class="row">
 				
 				<div class="span4">
-				     <div class="btn-toolbar">
-					
-					<div class="btn-group">
-					<a href="#"><button class="btn">&lt;</button></a>
-					<a href="#"><button class="btn">1</button></a>
-					<a href="#"><button class="btn">2</button></a>
-					<a href="#"><button class="btn">3</button></a>
-					<a href="#"><button class="btn">4</button></a>
-					<a href="#"><button class="btn">&gt;</button></a>
-					</div>
+				<div class="pagination" style="margin:-20px 0 50px 0; text-align:center;">
+			        <ul>
+			          <li class="disabled"><a href="#">«</a></li>
+			          <li class="active"><a href="#">1</a></li>
+			          <li><a href="#">2</a></li>
+			          <li><a href="#">3</a></li>
+			          <li><a href="#">4</a></li>
+			          <li><a href="#">»</a></li>
+			        </ul>
+			      </div>
+						
+					<div class="btn-toolbar">
 					
 					<form class="form">
 					<label>Add Layer by URL</label>
@@ -559,7 +554,7 @@
 					<button type="submit" class="btn">Add</button>
 					<label>Add Layer from external file</label>
 					<input type="text" class="span3" placeholder="Browse for file on your computer">
-					<button type="submit" class="btn">Browse</button>
+					<button type="submit" class="btn">Go</button>
 					</form>
 				
 				</div>
@@ -646,11 +641,11 @@
      <p>Adding someone to your project is easy. They don't have to be a member of your group. Just put in their email, type a message if you like and they'll be sent a message and have an ID automatically created for them.</p>
 	
      <form class="form">
-     <input type="text" class="input-small" placeholder="Email Address">
-          <div class="controls">
-	<textarea class="input-textarea_modal" id="textarea02" rows="3"></textarea>
-	</div>
-     <button type="submit" class="btn">Clear</button><br />
+     <input type="text" placeholder="Email Address" style="margin:12px 0 12px 0; width:400px;">
+
+	<textarea class="input-textarea_modal" id="textarea02" rows="3" placeholder="Your message" style="height:60px;"></textarea>
+
+     <button type="submit" class="btn" style="margin-top:24px;">Clear</button><br />
      
      </div>
      
@@ -674,35 +669,55 @@
 	</div>
 	<div class="modal-body">
 		<div class="alert alert-info">
-			<strong>Hey!</strong> Just so you know! Your build will run when resources allow so times aren’t exact.<button type="button" class="close" data-dismiss="alert">x</button>
+			<strong>Hey!</strong> Just so you know! Your build will run when resources allow so times aren’t exact.<button type="button" class="close" data-dismiss="alert">&times;</button>
 		</div>
 		<h4>Image to build</h4>
-		<div class="well">
+		<div class="well2">
 			<p><strong>Machine:</strong> beagleboard</p>
 			<p><strong>Base image:</strong> core-image-minimal-dev</p>
-			<button type="submit" class="btn btn-primary">Add to Queue</button>
-		</div>
+		</div>	
+		
+		<button type="submit" class="btn btn-primary" style="margin-top:18px">Add to Queue</button>
 		<hr />
 		<h4>Schedule it for later</h4>
-		<form class="well form-inline">
-			<label>Date</label><input type="text" class="input-small" placeholder="5/25/12">
-			<label>Time</label><input type="password" class="input-small" placeholder="12:00">
+		<form class="form-inline">
+			<label>Date </label><input type="text" class="input-small" placeholder="5/25/12"> 
+			<label>Time </label><input type="password" class="input-small" placeholder="12:00">
 		</form>
 		<img src="images/calendar.png">
+	</div>
 		<div class="modal-footer">
 			<button class="btn btn-primary">Add to Queue now</button>
 			<a href="#" class="btn" data-dismiss="modal" >Cancel</a>
 		</div>
-	</div>
 </div>
 <!--Build Schedule Modal Content-->
 
     </div><!-- /container -->
 
 
-<footer>
-<p>&copy; The Yocto Project</p>
- </footer>
+	<footer>
+		<div class="container" >
+			<div class="row">
+				<div class="span3" style="opacity:.65;">
+					<p>&copy; 2012 The Yocto Project</p>
+				</div>
+				<div class="span3">
+						<a href="#">About</a>
+						<a href="#">Blogs</a>
+						<a href="#">Documentation</a>
+				</div>
+				<div class="span3">
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms of Service</a>
+					<a href="#">Trademarks</a>
+				</div>
+				<div class="span3">
+					<a href="http://www.linuxfoundation.org" style="height:66px"><img src="images/linux_foundation.png" alt="Linux Foundation"/></a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
     <!-- Le javascript
     ================================================== -->

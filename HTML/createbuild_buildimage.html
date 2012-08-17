@@ -34,38 +34,43 @@
 	<!--HEADER-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container aligncenter">			
-				<a class="brand" href="index_dashboard.html">&nbsp;</a>
-				<div class="nav-collapse aligncenter">
-				<ul class="nav">
-					<li><a href="builds.html" class="icon-builds">Builds</a></li>
+			<div class="container">	
+ 				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+			
+				<ul class="nav" style="text-align:center;">
+					<!--SET THE ACTIVE SECTION by adding class="active"-->
+					<li class="active"><a href="builds.html" class="icon-builds">Builds</a></li>
 					<li><a href="projects.html" class="icon-projects">Projects</a></li>
 					<li><a href="groups.html" class="icon-groups">Groups</a></li>
 				</ul>
-	
-               <!--Top Right Tools-->
-               <div id="top-right-tools">
-             		<ul class="nav">	
-						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
-						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
-						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
-							<img src="images/icon_user.png" alt="Username" title="Username" />
-							<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-                              <li><img src="images/avatar_user.png"> UserName</li>
-                              <li class="divider"></li>
-                              <li><button class="btn btn-primary" href="#">Log Out</li>
-                        	</ul>
-						</li>
-					</ul>
-				</div>
-				<!--Top Right Tools-->
-				
-			</div>
-		</div><!--/.nav-collapse -->
 		
+			
+             <!--Top Right Tools-->
+             <div id="top-right-tools">
+           		<ul class="nav">	
+					<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+					<li><a data-toggle="modal" href="#queueModal">
+						<span class="badge badge-success" style="float:right;margin-left:-2px;">2</span>
+						<img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" />
+						</a></li>
+					<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" style="width:48px; height:48px; margin-top:-8px; background-image:url('images/icon_user.png');">
+						<span class="caret"> </span>
+						</a>
+						<ul class="dropdown-menu pull-right">
+                            <li><img src="images/icon_user.png">&nbsp; <strong>John Doe</strong></li>
+                            <li class="divider"></li>
+                            <li><a href = "#">Settings</a></li>
+                            <li><a href = "#">Account details</a></li>
+                            <li class="divider"></li>
+                            <li><button class="btn btn-primary" href="index.html">Log Out</button></li>
+	                    </ul>
+					</li>
+				</ul>
+			</div>
+			<!--Top Right Tools-->
+			</div>
 		</div>	
+			
 	</div>
 	<!--HEADER-->
 	
@@ -331,7 +336,26 @@
 <!-- /container -->
 </div>
 <footer>
-	<p>&copy; The Yocto Project</p>
+	<div class="container" >
+		<div class="row">
+			<div class="span3" style="opacity:.65;">
+				<p>&copy; 2012 The Yocto Project</p>
+			</div>
+			<div class="span3">
+					<a href="#">About</a>
+					<a href="#">Blogs</a>
+					<a href="#">Documentation</a>
+			</div>
+			<div class="span3">
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Service</a>
+				<a href="#">Trademarks</a>
+			</div>
+			<div class="span3">
+				<a href="http://www.linuxfoundation.org" style="height:66px"><img src="images/linux_foundation.png" alt="Linux Foundation"/></a>
+			</div>
+		</div>
+	</div>
 </footer>
 
 <!-- Le javascript

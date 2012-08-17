@@ -36,58 +36,63 @@
 	<!--HEADER-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container aligncenter">			
-				<a class="brand" href="index_dashboard.html">&nbsp;</a>
-				<div class="nav-collapse aligncenter">
-				<ul class="nav">
+			<div class="container">	
+ 				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+			
+				<ul class="nav" style="text-align:center;">
+					<!--SET THE ACTIVE SECTION by adding class="active"-->
 					<li><a href="builds.html" class="icon-builds">Builds</a></li>
-					<li><a href="projects.html" class="icon-projects">Projects</a></li>
+					<li class="active"><a href="projects.html" class="icon-projects">Projects</a></li>
 					<li><a href="groups.html" class="icon-groups">Groups</a></li>
 				</ul>
-	
-               <!--Top Right Tools-->
-               <div id="top-right-tools">
-             		<ul class="nav">	
-						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
-						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
-						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
-							<img src="images/icon_user.png" alt="Username" title="Username" />
-							<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-                              <li><img src="images/avatar_user.png"> UserName</li>
-                              <li class="divider"></li>
-                              <li><button class="btn btn-primary" href="#">Log Out</li>
-                        	</ul>
-						</li>
-					</ul>
-				</div>
-				<!--Top Right Tools-->
-				
-			</div>
-		</div><!--/.nav-collapse -->
 		
+			
+             <!--Top Right Tools-->
+             <div id="top-right-tools">
+           		<ul class="nav">	
+					<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+					<li><a data-toggle="modal" href="#queueModal">
+						<span class="badge badge-success" style="float:right;margin-left:-2px;">2</span>
+						<img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" />
+						</a></li>
+					<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" style="width:48px; height:48px; margin-top:-8px; background-image:url('images/icon_user.png');">
+						<span class="caret"> </span>
+						</a>
+						<ul class="dropdown-menu pull-right">
+                            <li><img src="images/icon_user.png">&nbsp; <strong>John Doe</strong></li>
+                            <li class="divider"></li>
+                            <li><a href = "#">Settings</a></li>
+                            <li><a href = "#">Account details</a></li>
+                            <li class="divider"></li>
+                            <li><button class="btn btn-primary" href="index.html">Log Out</button></li>
+	                    </ul>
+					</li>
+				</ul>
+			</div>
+			<!--Top Right Tools-->
+			</div>
 		</div>	
+			
 	</div>
 	<!--HEADER-->
 
      <div id="main" class="container" >
      <div class="alert alert-success alert-block">
-  <a class="close" data-dismiss="alert" href="#">x</a>
-  <h4 class="alert-heading">Saved! You successfully read this important
-alert message.</h4>
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <p class="alert-heading"><strong>Saved! You successfully read this important
+alert message.</strong></p>
 </div>
           <!-- Main Content -->
           <!--Top Bar-->
            <div class="row">
                <div class="span12" >
-               <h1>Projects</h1>
+               <h1><span class="glyph enclosed" style="vertical-align:top;">c</span> Projects</h1>
                <h2 class="pull-left">Yocto Block Rollout</h2>
 	     <ul class="nav nav-pills topbarnav pull-left" style="margin-left:0;">
 	     <li><a href="projects_myproject.html">Project</a></li>
-	     <li><a href="projects_history.html"><i class="icon-time"></i> History</a></li>
+	     <li><a href="projects_history.html"><i class="icon-time icon-blue"></i> History</a></li>
 	     <li class="active"><a href="projects_settings.html"><i class="icon-cog icon-white"></i> Settings</a></li>
-	     <li><a href="projects_permissions.html"><i class="icon-lock"></i> Permissions</a></li>
+	     <li><a href="projects_permissions.html"><i class="icon-lock icon-blue"></i> Permissions</a></li>
 	     </ul>
                </div>
           </div>
@@ -319,7 +324,7 @@ alert message.</h4>
  
 		 </div>
 		<!--Image extra size-->
-		
+		<hr />
 		<!--Image extra size-->
 		<div class="row">
 		
@@ -340,13 +345,15 @@ alert message.</h4>
 		     
 		     
 		     <div class="span4">
-		     <p>Selects the host platform for which you want to run the toolchain.</[>]
+		     <p>Selects the host platform for which you want to run the toolchain.</p>
 		     </div>
 		
 		</div>
+		
+		<hr />
 		<!--Image extra size-->
 		
-		<h3>Build Environment</h3>
+		<h3 style="margin-top: 18px;">Build Environment</h3>
 		
 		<div class="row">
 		     
@@ -362,7 +369,8 @@ alert message.</h4>
 		     </div>
 		     
 		     <div class="span4">
-		     <p>Select the best distro.</p>
+		     	<p>&nbsp;</p>
+			 	<p>Select the best distro.</p>
 		     </div>
 		     
 		</div>
@@ -378,7 +386,7 @@ alert message.</h4>
 		<div>
 		<p><button class="btn">Save settings as template</button></p>
 		<p><button class="btn">Archive project</button></p>
-		<p><a href="#"><i class="icon-trash"></i> Delete project</a></p>
+		<p><a href="#"><i class="icon-trash icon-blue"></i> Delete project</a></p>
 		</div>
 		
 		<p>&nbsp;</p>
@@ -444,9 +452,28 @@ alert message.</h4>
     </div><!-- /container -->
 
 
-<footer>
-<p>&copy; The Yocto Project</p>
- </footer>
+	<footer>
+		<div class="container" >
+			<div class="row">
+				<div class="span3" style="opacity:.65;">
+					<p>&copy; 2012 The Yocto Project</p>
+				</div>
+				<div class="span3">
+						<a href="#">About</a>
+						<a href="#">Blogs</a>
+						<a href="#">Documentation</a>
+				</div>
+				<div class="span3">
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms of Service</a>
+					<a href="#">Trademarks</a>
+				</div>
+				<div class="span3">
+					<a href="http://www.linuxfoundation.org" style="height:66px"><img src="images/linux_foundation.png" alt="Linux Foundation"/></a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
     <!-- Le javascript
     ================================================== -->

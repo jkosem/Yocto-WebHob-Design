@@ -37,38 +37,43 @@
 	<!--HEADER-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container aligncenter">			
-				<a class="brand" href="index_dashboard.html">&nbsp;</a>
-				<div class="nav-collapse aligncenter">
-				<ul class="nav">
+			<div class="container">	
+ 				<a class="brand" href="index_dashboard.html">&nbsp;</a>
+			
+				<ul class="nav" style="text-align:center;">
+					<!--SET THE ACTIVE SECTION by adding class="active"-->
 					<li><a href="builds.html" class="icon-builds">Builds</a></li>
 					<li><a href="projects.html" class="icon-projects">Projects</a></li>
-					<li><a href="groups.html" class="icon-groups">Groups</a></li>
+					<li class="active"><a href="groups.html" class="icon-groups">Groups</a></li>
 				</ul>
-	
-               <!--Top Right Tools-->
-               <div id="top-right-tools">
-             		<ul class="nav">	
-						<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
-						<li><a data-toggle="modal" href="#queueModal"><span><img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" /></span><span class="badge badge-success" style="float:right;">2</span></a></li>
-						<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">
-							<img src="images/icon_user.png" alt="Username" title="Username" />
-							<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-                              <li><img src="images/avatar_user.png"> UserName</li>
-                              <li class="divider"></li>
-                              <li><button class="btn btn-primary" href="#">Log Out</li>
-                        	</ul>
-						</li>
-					</ul>
-				</div>
-				<!--Top Right Tools-->
-				
-			</div>
-		</div><!--/.nav-collapse -->
 		
+			
+             <!--Top Right Tools-->
+             <div id="top-right-tools">
+           		<ul class="nav">	
+					<li><a href="#"><img src="images/icon_search.png" alt="Search" title="Search" /></a></li>
+					<li><a data-toggle="modal" href="#queueModal">
+						<span class="badge badge-success" style="float:right;margin-left:-2px;">2</span>
+						<img src="images/icon_runningbuilds.png" alt="Queue &mdash; 2 builds in progress" title="Queue &mdash; 2 builds in progress" />
+						</a></li>
+					<li class="dropdown"><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown" style="width:48px; height:48px; margin-top:-8px; background-image:url('images/icon_user.png');">
+						<span class="caret"> </span>
+						</a>
+						<ul class="dropdown-menu pull-right">
+                            <li><img src="images/icon_user.png">&nbsp; <strong>John Doe</strong></li>
+                            <li class="divider"></li>
+                            <li><a href = "#">Settings</a></li>
+                            <li><a href = "#">Account details</a></li>
+                            <li class="divider"></li>
+                            <li><button class="btn btn-primary" href="index.html">Log Out</button></li>
+	                    </ul>
+					</li>
+				</ul>
+			</div>
+			<!--Top Right Tools-->
+			</div>
 		</div>	
+			
 	</div>
 	<!--HEADER-->
 
@@ -78,11 +83,11 @@
     <div class="row main">
       <div class="span12">
            <div class="row">
-                <div class="span2">
-                 <h1>Groups</h1>
+                <div class="span3">
+                 <h1><span class="glyph enclosed" style="vertical-align:top;">o</span> Groups</h1>
                 </div>
                 
-                <div class="span7">
+                <div class="span6">
                  <p class="match-h1">First thing you would read is probably some introductory text about groups in Yocto and what they do really quickly. This is different from the stuff in the side bar.</p>
                 </div>
                 
@@ -95,108 +100,119 @@
       <div class="span9">
            <div class="row grouppods">
 
-                <div class="span2">
-                <h3>Dev Groups</h3>
-                </div>
-      
-                <div class="span7">
-                <h4>Group Permissions</h4>
-                <p>Group members inherit group permissions by default.</p>
-                
-                <form class="horizontal-form">
-                <fieldset>
-                     <div class="control-group ">
-                          <div class="controls">
-                          <label class="checkbox inline">
-                          <input type="checkbox" id="inlineCheckbox1" value="createproject">Create Project
-                          </label>
-                          <label class="checkbox inline">
-                          <input type="checkbox" id="inlineCheckbox2" value="access_deletebuilds"> Access/delete builds
-                          </label>
-                          <label class="checkbox inline">
-                          <input type="checkbox" id="inlineCheckbox3" value="addlayers"> Add external Layers
-                          </label>
-                          </div>
-                     </div>
-                </fieldset>
-                </form>
-                     
-                <h4>Group Members</h4>
-                     <div class="row">
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Bob Woodward <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> bob@company.com</a></p>
-                          </div>
-                          
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Mike Tompkins <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> mike@company.com</a></p>
-                          </div>
-                          
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Bill Watson <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> bill@company.com</a></p>
-                          </div>
-                          
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Alex Manamam <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> alex@company.com</a></p>
-                          </div>
-                          
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Todd Rama <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> todd@company.com</a></p>
-                          </div>
-                     
-                     </div>
-                     
-                     <button class="btn"><i class="icon-plus-sign"></i> Add someone to the group
- 
-                </div>
-                
-                
-           </div>
-                
-           <div class="row grouppods">
+               <div class="span2">
+		     <h3>Dev Group</h3>
+		     </div>
 
-                <div class="span2">
-                <h3>QA Groups</h3>
-                </div>
-      
-                <div class="span7">
-                <h4>Group Permissions</h4>
-                <p>Group members inherit group permissions by default.</p>
-                
-                <form class="horizontal-form">
-                <fieldset>
-                     <div class="control-group ">
-                          <div class="controls">
-                          <label class="checkbox inline">
-                          <input type="checkbox" id="inlineCheckbox1" value="createproject">Create Project
-                          </label>
-                          <label class="checkbox inline">
-                          <input type="checkbox" id="inlineCheckbox2" value="access_deletebuilds"> Access/delete builds
-                          </label>
-                          <label class="checkbox inline">
-                          <input type="checkbox" id="inlineCheckbox3" value="addlayers"> Add external Layers
-                          </label>
-                          </div>
-                     </div>
-                </fieldset>
-                </form>
-                     
-                <h4>Group Members</h4>
-                     <div class="row">
+		     <div class="span7">
+		     <h4>Group Permissions</h4>
+		     <p>Group members inherit group permissions by default.</p>
 
-                     <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Bob Woodward <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> bob@company.com</a></p>
-                          </div>
-                          
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Mike Tompkins <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> mike@company.com</a></p>
-                          </div>
-                          
-                          <div class="span3"><img src="images/avatar_user.png" class="pull-left"><p>Bill Watson <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i><i class="icon-trash"></i></a><br />
-                          <a href="#"><i class="icon-envelope"></i> bill@company.com</a></p>
-                          </div>
-                     
-                     </div>
-                     
+		     <form class="horizontal-form">
+		     <fieldset>
+			<div class="control-group ">
+			     <div class="controls">
+			     <label class="checkbox inline">
+			     <input type="checkbox" id="inlineCheckbox1" value="createproject">Edit Project
+			     </label>
+			     <label class="checkbox inline">
+			     <input type="checkbox" id="inlineCheckbox2" value="access_deletebuilds"> Access/delete builds
+			     </label>
+			     <label class="checkbox inline">
+			     <input type="checkbox" id="inlineCheckbox3" value="addlayers">Modify Recipes
+			     </label>
+			     </div>
+			</div>
+		     </fieldset>
+		     </form>
+
+		     <h4>Group Members</h4>
+			<!--Group Members-->
+			<div class="row">
+			     <div class="span3"><img src="images/user2.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Mary Jones <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> mary@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user3.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Tim Marsh <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> tim@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user4.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Alex Cheng <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> alex@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user5.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>External guy <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> guy@acompany.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user6.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Bill Watson <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> bill@company.com</a></p>
+			     </div>
+
+			</div>
+			<!--Group Members-->
+
+		     <button class="btn"><i class="icon-plus-sign"></i> Add someone to the group</button>
+
+		     </div>
+
+		</div>
+		<!--Dev Group-->
+
+		 <!--Internal QA Group-->
+                    <div class="row grouppods">
+
+		     <div class="span2">
+		     <h3>Internal QA Group</h3>
+		     </div>
+
+		     <div class="span7">
+		     <h4>Group Permissions</h4>
+		     <p>Group members inherit group permissions by default.</p>
+
+		     <form class="horizontal-form">
+		     <fieldset>
+			<div class="control-group ">
+			     <div class="controls">
+			     <label class="checkbox inline">
+			     <input type="checkbox" id="inlineCheckbox1" value="createproject">Edit Project
+			     </label>
+			     <label class="checkbox inline">
+			     <input type="checkbox" id="inlineCheckbox2" value="access_deletebuilds"> Access/delete builds
+			     </label>
+			     <label class="checkbox inline">
+			     <input type="checkbox" id="inlineCheckbox3" value="addlayers">Modify Recipes
+			     </label>
+			     </div>
+			</div>
+		     </fieldset>
+		     </form>
+
+		     <h4>Group Members</h4>
+			<!--Group Members-->
+		 	<div class="row">
+			     <div class="span3"><img src="images/user.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Bob Woodward <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> bob@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user7.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Jess Tompkinks <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> jess@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user6.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Bill Watson <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> bill@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user8.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>Todd Rama <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> todd@company.com</a></p>
+			     </div>
+
+			     <div class="span3"><img src="images/user5.png" class="pull-left" alt="" style="width:36px; height:36px; margin-right:5px;" /><p>External guy <a data-toggle="modal" href="#userpermissionsModal"><i class="icon-cog"></i></a><br />
+			     <a href="#"><i class="icon-envelope"></i> guy@acompany.com</a></p>
+			     </div>
+
+			</div>
+			<!--Group Members-->
                      <button class="btn"><i class="icon-plus-sign"></i> Add someone to the group
  
                 </div>
@@ -276,18 +292,18 @@
      
      <div class="modal-body">
        
-        <form class="form-inline form-permissions">
+        <form class="form-inline form-permissions" style="padding-right:20px;">
         
         <label class="checkbox">
         <input type="checkbox"> Create Project
         </label>
         
-        <form class="form-inline">
+        <form class="form-inline" style="padding-right:20px;">
         <label class="checkbox">
         <input type="checkbox"> Access/delete builds
         </label>
         
-        <form class="form-inline">
+        <form class="form-inline" style="padding-right:20px;">
         <label class="checkbox">
         <input type="checkbox"> Add external layers
         </label>
@@ -307,8 +323,27 @@
 </div>
 
 <footer>
-<p>&copy; The Yocto Project</p>
- </footer>
+	<div class="container" >
+		<div class="row">
+			<div class="span3" style="opacity:.65;">
+				<p>&copy; 2012 The Yocto Project</p>
+			</div>
+			<div class="span3">
+					<a href="#">About</a>
+					<a href="#">Blogs</a>
+					<a href="#">Documentation</a>
+			</div>
+			<div class="span3">
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Service</a>
+				<a href="#">Trademarks</a>
+			</div>
+			<div class="span3">
+				<a href="http://www.linuxfoundation.org" style="height:66px"><img src="images/linux_foundation.png" alt="Linux Foundation"/></a>
+			</div>
+		</div>
+	</div>
+</footer>
 
     <!-- Le javascript
     ================================================== -->
